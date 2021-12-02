@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Survey</title>
+</head>
+<body style="font-family: 'Lucida Sans Unicode'">
+<h1>Market Research Survey</h1>
+<p>Please take a few moments to complete this satisfaction survey</p>
+<hr style=" border: none;
+    border-top: 1px dotted black;">
+<form method="get" action="BaiTapTaoFormLaySurvey.html">
+    <h3>What is your age range?</h3>
+    <select style="width: 500px;height: 30px;font-size: large">
+        <option value="<18">Under 18</option>
+        <option value="18-22">18-22</option>
+        <option value="23-30">23-30</option>
+    </select>
+    <h3>What is your yearly income range?</h3>
+    <select style="width: 500px;height: 30px;font-size:large">
+        <option value="0-2500$">0-2500$</option>
+        <option value="2501-5000$">2501-5000$</option>
+        <option value="5001-10000$">5001-10000$</option>
+        <option value=">10000$">over 10000$</option>
+    </select><br>
+    <h3>Gender</h3>
+    <input type="radio" name="gender">Male<br>
+    <input type="radio" name="gender">Female<br>
+    <input type="radio" name="gender">Others<br>
+    <h3>Which of the following products have you purchased in the last 2 months.Please check all that apply</h3>
+    <input type="checkbox" name="product">Product 1<br>
+    <input type="checkbox" name="product">Product 2<br>
+    <input type="checkbox" name="product">Product 3<br>
+    <h3>How ofter would you use our new product?</h3>
+    <input type="radio" name="gender">Daily<br>
+    <input type="radio" name="gender">Weekly<br>
+    <input type="radio" name="gender">Monthly<br>
+    <h3>What would you pay for the new product?</h3>
+    <table>
+        <tr>
+            <td>$<input type="number"></td>
+            <td>.<input style="width:30px" type="number"></td>
+        </tr>
+        <tr>
+            <td>Dollars</td>
+            <td>Cents</td>
+        </tr>
+    </table>
+    <h3>What features would you like to see in the new product?</h3>
+    <textarea style="width: 1000px;height: 300px"></textarea><br><br>
+
+    Please rate your level of agreement with the following statements:
+    <table border="1 solid" cellpadding="10px" style="border-collapse: collapse">
+        <tr style="background-color: #d7e6ff">
+            <th></th>
+            <th>Strongly Disagree</th>
+            <th>Disagree</th>
+            <th>Agree</th>
+            <th>Strongly Agree</th>
+        </tr>
+        <tr>
+            <th style="text-align: left">Our products are priced fairly</th>
+            <td style="text-align: center"><input type="radio" name="mark">1</td>
+            <td style="text-align: center"><input type="radio" name="mark">2</td>
+            <td style="text-align: center"><input type="radio" name="mark">3</td>
+            <td style="text-align: center"><input type="radio" name="mark">4</td>
+        </tr>
+        <tr style="background-color: #e8e9ff">
+            <th style="text-align: left">Our products are high quality</th>
+            <td style="text-align: center"><input type="radio" name="mark">1</td>
+            <td style="text-align: center"><input type="radio" name="mark">2</td>
+            <td style="text-align: center"><input type="radio" name="mark">3</td>
+            <td style="text-align: center"><input type="radio" name="mark">4</td>
+        </tr>
+        <tr>
+            <th>You would recommend our product to a friend or coworker</th>
+            <td style="text-align: center"><input type="radio" name="mark">1</td>
+            <td style="text-align: center"><input type="radio" name="mark">2</td>
+            <td style="text-align: center"><input type="radio" name="mark">3</td>
+            <td style="text-align: center"><input type="radio" name="mark">4</td>
+        </tr>
+    </table>
+    <br>
+    <button style="width: 70px;height: 30px;font-size: large" type="submit" value="Submit">Submit</button>
+</form>
+</body>
+</html>
