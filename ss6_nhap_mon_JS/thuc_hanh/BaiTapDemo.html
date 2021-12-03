@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập tính điểm trung bình</title>
+</head>
+<body>
+Điểm toán:<input id="num1"><br>
+Điểm lý:<input id="num2"><br>
+Điểm hoá:<input id="num3"><br>
+<button onclick="TinhTB()">Trung Bình Cộng</button>
+<script>
+    // let name = prompt("Nhâp tên: "); // nhập dữ liệu từ bàn phím dùng prompt của js
+    //
+    // alert("Tên vừa nhập: " + name ) // hiên thij cùng câu lệnh cuủ js
+
+    // let name = document.getElementById("name").value;
+    // alert(name);
+    function TinhTB() {
+        let n1 = document.getElementById("num1").value;
+        n1= parseInt(n1);
+        let n2 = document.getElementById("num2").value;
+        n2= parseInt(n2);
+        let n3 = document.getElementById("num3").value;
+        n3= parseInt(n3);
+        let avg = (n1+n2+n3)/3;
+        alert("Điểm trung bình:" + avg);
+    }
+</script>
+</html>
