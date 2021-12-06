@@ -11,14 +11,15 @@
             <th>Amount</th>
             <th>From Currency</th>
             <th>To Currency</th>
-        </tr><br>
+        </tr>
+        <br>
         <tr>
             <td>
-                <input type="text" id="dauvao">
+                <input type="text" id="dauVao">
             </td>
             <td>
                 <select name="" id="from">
-                    <option value="vietnam">VND</option>
+                    <option value="vietNam">VND</option>
                     <option value="america">USA</option>
                     <option value="korea">KRW</option>
                 </select>
@@ -31,21 +32,41 @@
                 </select>
             </td>
             <td>
-                <button type="button" onclick="chuyendoi()">Convert</button>
+                <button type="button" onclick="chuyenDoi()">Convert</button>
             </td>
-        </tr><br>
+        </tr>
+        <br>
         <tr>
-            Result:
+            <td id="ketQua">
+                Result:
+            </td>
         </tr>
     </table>
 </form>
 <script>
-    function chuyendoi() {
-let giatrivao=document.getElementById(dauvao).value;
-let from=document.getElementById(from).value;
-let to=document.getElementById(to).value;
-if from==to
-    alert(dauvao)
+    function chuyenDoi() {
+        let giaTriVao = document.getElementById('dauVao').value;
+        let from = document.getElementById('from').value;
+        let to = document.getElementById('to').value;
+        if (from === to) {
+            document.getElementById("ketQua").innerText = "Result:" + giaTriVao;
+        } else if (from == "vietNam" && to == "japan") {
+            document.getElementById("ketQua").innerText = "Result:" + giaTriVao / 203.94;
+        } else if (from == "vietNam" && to == "america") {
+            document.getElementById("ketQua").innerText = "Result:" + giaTriVao / 23000;
+        } else {
+            document.getElementById("ketQua").innerText = "Result:" + giaTriVao / 19.49;
+        }
+        if (from == "america" && to == "japan") {
+            document.getElementById("ketQua").innerText = "Result:" + giaTriVao * 113.01;
+        } else {
+            document.getElementById("ketQua").innerText = "Result:" + giaTriVao * 1182.04;
+        }
+        if (from == "korea" && to == "japan") {
+            document.getElementById("ketQua").innerText = "Result:" + giaTriVao * 113.01;
+        } else {
+            document.getElementById("ketQua").innerText = "Result:" + giaTriVao / 1182.04;
+        }
     }
 </script>
 </body>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng máy tính</title>
+</head>
+<body>
+
+<table>
+    <tr>
+        <th style="font-size: x-large;text-align: left" colspan="4">Calculator</th>
+    </tr>
+    <tr>
+        <td colspan="2"><input id="so1" type="number"></td>
+        <td colspan="2"><input id="so2" type="number"></td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="add()" type="button">Addition(+)</button>
+        </td>
+        <td>
+            <button onclick="sub()" type="button">Subtraction(-)</button>
+        </td>
+        <td>
+            <button onclick="mul()" type="button">Multiplication(x)</button>
+        </td>
+        <td>
+            <button onclick="div()" type="button">Division(/)</button>
+        </td>
+    </tr>
+    <br><br>
+    <tr>
+        <td id="result"></td>
+    </tr>
+</table>
+<script>
+
+    function add() {
+        let num1 = parseInt(document.getElementById("so1").value);
+        let num2 = parseInt(document.getElementById("so2").value);
+        document.getElementById("result").innerText = "Result Addition:" + (num1 + num2);
+    }
+
+    function sub() {
+        let num1 = parseInt(document.getElementById("so1").value);
+        let num2 = parseInt(document.getElementById("so2").value);
+        document.getElementById("result").innerText = "Result Subtraction:" + (num1 - num2);
+    }
+
+    function mul() {
+        let num1 = parseInt(document.getElementById("so1").value);
+        let num2 = parseInt(document.getElementById("so2").value);
+        document.getElementById("result").innerText = "Result Multiplication:" + (num1 * num2);
+    }
+
+    function div() {
+        let num1 = parseInt(document.getElementById("so1").value);
+        let num2 = parseInt(document.getElementById("so2").value);
+        document.getElementById("result").innerText = "Result Division:" + (num1 / num2);
+    }
+
+</script>
+</body>
+</html>
