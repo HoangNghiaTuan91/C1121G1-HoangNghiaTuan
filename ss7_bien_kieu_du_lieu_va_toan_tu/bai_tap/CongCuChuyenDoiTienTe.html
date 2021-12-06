@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền tệ</title>
+</head>
+<body>
+<form>
+    <table width="800px">
+        <tr>
+            <th>Amount</th>
+            <th>From Currency</th>
+            <th>To Currency</th>
+        </tr><br>
+        <tr>
+            <td>
+                <input type="text" id="dauvao">
+            </td>
+            <td>
+                <select name="" id="from">
+                    <option value="vietnam">VND</option>
+                    <option value="america">USA</option>
+                    <option value="korea">KRW</option>
+                </select>
+            </td>
+            <td>
+                <select name="" id="to">
+                    <option value="japan">YEN</option>
+                    <option value="america">USA</option>
+                    <option value="korea">KRW</option>
+                </select>
+            </td>
+            <td>
+                <button type="button" onclick="chuyendoi()">Convert</button>
+            </td>
+        </tr><br>
+        <tr>
+            Result:
+        </tr>
+    </table>
+</form>
+<script>
+    function chuyendoi() {
+let giatrivao=document.getElementById(dauvao).value;
+let from=document.getElementById(from).value;
+let to=document.getElementById(to).value;
+if from==to
+    alert(dauvao)
+    }
+</script>
+</body>
+</html>
