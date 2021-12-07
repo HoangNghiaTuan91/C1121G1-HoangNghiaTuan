@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính đơn giản</title>
+    <link type="text/css" rel="stylesheet" href="MayTinh.css">
+</head>
+<body>
+<div id="container">
+    <input id="ketQua" placeholder="0" style="text-align: right"><br>
+    <input type="button" value="1" onclick="nhap(this.value)">
+    <input type="button" value="2" onclick="nhap(this.value)">
+    <input type="button" value="3" onclick="nhap(this.value)">
+    <input type="button" value="+" onclick="nhap(this.value)"><br>
+    <input type="button" value="4" onclick="nhap(this.value)">
+    <input type="button" value="5" onclick="nhap(this.value)">
+    <input type="button" value="6" onclick="nhap(this.value)">
+    <input type="button" value="-" onclick="nhap(this.value)"><br>
+    <input type="button" value="7" onclick="nhap(this.value)">
+    <input type="button" value="8" onclick="nhap(this.value)">
+    <input type="button" value="9" onclick="nhap(this.value)">
+    <input type="button" value="*" onclick="nhap(this.value)"><br>
+    <input type="button" value="C" onclick="xoa()">
+    <input type="button" value="0" onclick="nhap(this.value)">
+    <input type="button" value="=" onclick="tinh()">
+    <input type="button" value="/" onclick="nhap(this.value)"><br>
+    <script>
+        function nhap(val) {
+            document.getElementById('ketQua').value += val;
+        }
+
+        function tinh() {
+            let bieuThuc = document.getElementById('ketQua').value;
+            document.getElementById('ketQua').value = eval(bieuThuc);
+        }
+
+        function xoa() {
+            document.getElementById('ketQua').value = '';
+        }
+    </script>
+</div>
+</body>
+</html>

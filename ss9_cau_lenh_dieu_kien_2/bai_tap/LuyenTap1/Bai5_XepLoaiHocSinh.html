@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xếp loại</title>
+</head>
+<body>
+<script>
+    let a = parseFloat(prompt("Nhập điểm kiểm tra 1 tiết"));
+    let b = parseFloat(prompt("Nhập điểm kiểm tra giữa kì"));
+    let c = parseFloat(prompt("Nhập điểm kiểm tra cuối kì"));
+    if (a < 0 || a > 10 || b < 0 || b > 10 || c < 0 || c > 10) {
+        alert("Điểm thi không hợp lệ")
+    } else avg = ((a + b * 2) / 3) * 0.4 + c * 0.6;
+    if (avg >= 8.5) {
+        alert("Loại giỏi");
+    } else if (avg >= 6.5) {
+        alert("Loại khá");
+    } else {
+        alert("Loại Trung Bình")
+    }
+</script>
+</body>
+</html>
