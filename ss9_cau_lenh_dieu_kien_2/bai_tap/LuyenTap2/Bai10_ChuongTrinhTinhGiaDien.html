@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giá điện</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt("Nhập số kW điện nhà bạn tháng vừa qua"));
+    let tienDien = 0
+    if (a > 0 && a <= 50) {
+        tienDien = a * 1678;
+        alert("Tiền điện của bạn là" + tienDien.toLocaleString())
+    } else if (a >= 51 && a <= 100) {
+        tienDien = a * 1734;
+        alert("Tiền điện của bạn là" + tienDien.toLocaleString())
+    } else if (a >= 101 && a <= 200) {
+        tienDien = a * 2014;
+        alert("Tiền điện của bạn là" + tienDien.toLocaleString())
+    } else {
+        tienDien = a * 2536;
+        alert("Tiền điện của bạn là" + tienDien.toLocaleString())
+    }
+</script>
+</body>
+</html>

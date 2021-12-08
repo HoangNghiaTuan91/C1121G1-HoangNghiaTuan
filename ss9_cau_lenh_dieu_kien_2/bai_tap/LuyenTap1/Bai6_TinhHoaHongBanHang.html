@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính hoa hồng</title>
+</head>
+<body>
+<script>
+    let doanhSo = parseInt(prompt('Nhập doanh số của bạn tháng này: '));
+    let hoaHong = 0;
+    if (doanhSo <= 100000000) {
+        hoaHong = doanhSo * 0.1;
+        alert('Tiền hoa hồng tháng này của bạn là: ' + hoaHong.toLocaleString());
+    } else if (doanhSo <= 200000000) {
+        hoaHong = doanhSo * 0.2;
+        alert('Tiền hoa hồng tháng này của bạn là: ' + hoaHong.toLocaleString());
+    } else {
+        hoaHong = doanhSo * 0.3;
+        alert('Tiền hoa hồng tháng này của bạn là: ' + hoaHong.toLocaleString());
+    }
+</script>
+</body>
+</html>

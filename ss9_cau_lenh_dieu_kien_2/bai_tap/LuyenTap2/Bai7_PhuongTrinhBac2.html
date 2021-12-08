@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phương trình bậc 2</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt("Nhập a"));
+    let b = parseInt(prompt("Nhập b"));
+    let c = parseInt(prompt("Nhập c"));
+    if (a === 0) {
+        alert("Vui lòng nhập a >0");
+    } else i = b * b - 4 * a * c;
+
+    if (i < 0) {
+        alert("Phương trình vô nghiệm")
+    } else if (i === 0) {
+        let x = -b / (2 * a);
+        alert("Phương trình có nghiệm kép x1,x2 là " + x);
+    } else {
+        let x1 = (-b + Math.sqrt(i)) / (2 * a);
+        let x2 = (-b - Math.sqrt(i)) / (2 * a);
+        alert("Nghiệm thứ 1 của phương trình là: " + x1);
+        alert("Nghiệm thứ 1 của phương trình là: " + x2);
+    }
+</script>
+</body>
+</html>

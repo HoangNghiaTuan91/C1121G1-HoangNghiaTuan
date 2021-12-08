@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thuế thu nhập cá nhân</title>
+</head>
+<body>
+<script>
+    let a=parseInt(prompt("Nhập mức lương của bạn"));
+    let thue=0;
+    if (a<9000000){
+        alert("Bạn không bị đánh thuế thu nhập cá nhân")
+    }
+    else {
+        thue = (a - 9000000) * 0.1;
+        alert("Thuế thu nhập bạn phải đóng là: " + thue.toLocaleString() +" VND");
+    }
+</script>
+</body>
+</html>
