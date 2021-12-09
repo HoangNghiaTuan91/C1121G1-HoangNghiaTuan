@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra nhiệt độ</title>
+</head>
+<body>
+<script>
+    let temp = Number(prompt("Nhập vào nhiệt độ"))
+    while (temp<20 || temp>100){
+        if(temp<20){
+            alert("Nhiệt độ quá lạnh")
+            temp = Number(prompt("Nhập vào nhiệt độ"))
+        }else if(temp>100){
+            alert("Nhiệt độ quá nóng")
+            temp = Number(prompt("Nhập vào nhiệt độ"))
+        }
+    }
+    alert("Nhiệt độ bình thường")
+</script>
+</body>
+</html>

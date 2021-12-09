@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tổng 30 số</title>
+</head>
+<body>
+<script>
+    let sum = 0, count = 0, daySo = "";
+    for (let i = 1; ; i++) {
+        if (i % 7 === 0) {
+            daySo += i + " ";
+            sum += i;
+            count++;
+            if (count === 30) {
+                break;
+            }
+
+        }
+    }
+    document.write(daySo + "<br>");
+    document.write("Tổng 30 số đầu tiên chia hết cho 7 là: " + sum);
+</script>
+</body>
+</html>

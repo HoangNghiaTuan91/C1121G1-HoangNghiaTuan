@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chia hết cho 5</title>
+</head>
+<body>
+<script>
+    let S = 0, S0 = 0, S1 = 0
+    let fibonacci = "";
+    for (let i = 0; i < 20; i++) {
+        if (i == 0) {
+            S = 1;
+            S1 = 1;
+            fibonacci += S + " ";
+        } else {
+            S = S0 + S1;
+            S0 = S1;
+            S1 = S;
+            fibonacci += S + " ";
+            if (S % 5 === 0) {
+                alert("Số đầu tiên của dãy Fibonacci chia hết cho 5 là: " + S);
+                break;
+            }
+        }
+    }
+    document.write(fibonacci);
+
+</script>
+</body>
+</html>

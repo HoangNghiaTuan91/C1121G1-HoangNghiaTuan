@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game đoán số</title>
+</head>
+<body>
+<script>
+    let daySo = parseInt(prompt("Trò chơi đoán số từ 0 - "));
+    let so = parseInt(prompt("Nhập vào số muốn đoán"));
+    let random;
+    if (daySo) {
+        random = Math.floor(Math.random() * (daySo + 1));
+        if (random === so) {
+            alert("Bạn đã đoán đúng");
+        } else {
+            while (random !== so) {
+                alert("Bạn đoán sai rồi, số đúng là: " + random);
+                so = parseInt(prompt("Nhập lại kết quả"));
+            }
+            alert("Bạn đoán đúng");
+        }
+    }
+</script>
+</body>
+</html>
