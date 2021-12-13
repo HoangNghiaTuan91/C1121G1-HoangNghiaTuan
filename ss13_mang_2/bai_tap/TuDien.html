@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển Anh-Việt</title>
+</head>
+<body>
+<h1>
+    Từ điển Anh-Việt
+</h1>
+<h3>
+    Tiếng Anh
+</h3>
+<input type="text" id="tiengAnh">
+<button type="button" onclick="dich()">
+    Dịch
+</button>
+<br>
+<h3>
+    Tiếng Việt
+</h3>
+<p id="nghia"></p>
+<script>
+    let eng = ["hello", "goodbye", "beautiful", "good"];
+    let viet = ["xin chào", "tạm biệt", "xinh đẹp", "tốt"];
+    let a;
+    let b;
+
+    function dich() {
+        a = document.getElementById("tiengAnh").value;
+        for (let i = 0; i < eng.length; i++) {
+            if (a === eng[i]) {
+                b = viet[i];
+                break;
+            } else {
+                b = "không có kết quả"
+            }
+        }
+        document.getElementById("nghia").innerText = b;
+    }
+
+</script>
+</body>
+</html>

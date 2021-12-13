@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT3</title>
+</head>
+<body>
+<script>
+    let a = prompt('Nhập kí tự: ');
+    let upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let lower = 'abcdefghijklmnopqrstuvwxyz';
+    let b = [];
+    for (let i = 0; i < a.length; i++){
+        if(upper.indexOf(a[i]) !== -1){
+            b.push(a[i].toLocaleLowerCase());
+        }else if (lower.indexOf(a[i]) !== -1){
+            b.push(a[i].toLocaleUpperCase());
+        }else {
+            b.push(a[i]);
+        }
+    }
+    document.write(b.join(' '));
+</script>
+</body>
+</html>

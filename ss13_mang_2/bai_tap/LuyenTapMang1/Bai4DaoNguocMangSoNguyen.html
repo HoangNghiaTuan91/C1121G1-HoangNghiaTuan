@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài4</title>
+</head>
+<body>
+<script>
+    let size = parseInt(prompt('Nhập độ dài mảng: '));
+    let arr = [];
+    for (let i = 0; i < size; i++) {
+        arr[i] = parseInt(prompt('Nhập phần tử thứ ' + i + ' của mảng'));
+    }
+    document.write('Mảng : ' + arr + '<br>');
+    let nguoc = arr.reverse();
+    document.write('Mảng đảo ngược: ' + nguoc);
+</script>
+</body>
+</html>

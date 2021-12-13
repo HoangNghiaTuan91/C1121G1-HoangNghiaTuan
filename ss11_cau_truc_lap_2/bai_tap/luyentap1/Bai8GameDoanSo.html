@@ -9,16 +9,22 @@
     let daySo = parseInt(prompt("Trò chơi đoán số từ 0 - "));
     let so = parseInt(prompt("Nhập vào số muốn đoán"));
     let random;
+    let count = 0;
     if (daySo) {
-        random = Math.floor(Math.random() * (daySo + 1));
+        random = Math.round(Math.random() * daySo);
         if (random === so) {
             alert("Bạn đã đoán đúng");
         } else {
             while (random !== so) {
                 alert("Bạn đoán sai rồi, số đúng là: " + random);
-                so = parseInt(prompt("Nhập lại kết quả"));
+                count++;
+                if (count <= 3) {
+                    so = parseInt(prompt("Nhập lại kết quả"));
+                } else {
+                    alert("bạn đã đoán sai quá 3 lần")
+                    break;
+                }
             }
-            alert("Bạn đoán đúng");
         }
     }
 </script>

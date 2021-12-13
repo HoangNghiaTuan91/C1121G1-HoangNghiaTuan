@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT2</title>
+</head>
+<body>
+<script>
+    let size = parseInt(prompt('Nhập độ dài mảng: '));
+    let arr = [];
+    for (let i = 0; i < size; i++) {
+        arr[i] = parseInt(prompt('Nhập phần tử thứ ' + i + ' của mảng'));
+    }
+    document.write('Mảng : ' + arr + '<br>');
+    let max = arr[0];
+    let index;
+    for (let l = 1; l < size; l++) {
+        if (max < arr[l]) {
+            max = arr[l];
+            index = l;
+        }
+    }
+    document.write('Phần tử có giá trị lớn nhất là: ' + max + '<br>');
+    document.write('Vị trí phần tử lớn nhất là: ' + index + '<br>');
+</script>
+</body>
+</html>

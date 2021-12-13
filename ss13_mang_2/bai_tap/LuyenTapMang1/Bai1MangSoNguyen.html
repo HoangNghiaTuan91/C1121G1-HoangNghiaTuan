@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 1</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt("Nhập vào số phần tử của mảng"));
+
+    let arr = [];
+    let arr2=[]
+    let count = 0;
+    for (let i = 0; i < a; i++) {
+        arr[i] = prompt("Nhập vào phần tử" + " " + i + " " + "của mảng")
+        if (arr[i] >= 10) {
+            count++;
+            arr2.push(arr[i]);
+        }
+    }
+    document.write("Số phần tử của mảng lớn hơn 10 là" + " " + count +"<br>");
+    document.write("Các phần tử đó là: " + arr2);
+
+</script>
+
+let array = new Array(5);
+for (let i = 0; i < 5; i++) {
+let check=false;
+do {
+let e = prompt("nhập vào phần tử thứ" + i);
+check = false;
+for (let j = 0; j < i; j++) {
+if (e == array[j]) {
+check = true;
+break;
+}
+}
+if (!check) {
+array[i] = e;
+break;
+}
+}while (true)
+}
+alert(array);
+</body>
+</html>
