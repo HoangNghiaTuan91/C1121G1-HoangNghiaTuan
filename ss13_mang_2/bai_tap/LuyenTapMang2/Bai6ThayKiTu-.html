@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài6</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let n = prompt("Nhập độ dài của mảng")
+    for (let i = 0; i < n; i++) {
+        arr[i] = prompt("Nhập vào kí tự " + i + " của mảng");
+    }
+    document.write("Mảng lúc đầu:" + arr+"<br>");
+    for (let j = 0; j < n; j++)
+        if (arr[j] === "-") {
+            arr[j] = "_";
+        }
+    document.write("Mảng lúc sau:" + arr);
+
+</script>
+</body>
+</html>

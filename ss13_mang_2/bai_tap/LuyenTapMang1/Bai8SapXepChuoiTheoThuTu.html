@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài8</title>
+</head>
+<body>
+<script>
+    let arr = new Array(10);
+    for (let i=0;i<10;i++){
+        arr[i]=parseInt(prompt("Nhập phần tử thứ "+i+" của mảng"));
+    }
+    document.write("mảng lúc đầu: "+arr+"<br>");
+    arr.sort(function (a,b) {return b-a});
+    document.write("mảng sau khi sắp xếp: "+arr);
+</script>
+</body>
+</html>

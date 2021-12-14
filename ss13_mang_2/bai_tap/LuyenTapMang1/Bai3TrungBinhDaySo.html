@@ -11,7 +11,6 @@
     for (let i = 0; i < size; i++) {
         arr[i] = parseInt(prompt('Nhập phần tử thứ ' + i + ' của mảng'));
     }
-    document.write('Mảng : ' + arr + '<br>');
     let max = arr[0];
     let index;
     for (let l = 1; l < size; l++) {
@@ -20,14 +19,14 @@
             index = l;
         }
     }
-    document.write('Phần tử có giá trị lớn nhất là: ' + max + '<br>');
-    document.write('Vị trí phần tử lớn nhất là: ' + index + '<br>');
-
     let sum = 0;
     for (let j = 0; j < size; j++) {
         sum += arr[j];
     }
     let avg = sum / size;
+    document.write('Mảng : ' + arr + '<br>');
+    document.write('Phần tử có giá trị lớn nhất là: ' + max + '<br>');
+    document.write('Vị trí phần tử lớn nhất là: ' + index + '<br>');
     document.write("Giá trị trung bình của mảng là: " + avg);
 
 

@@ -2,26 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Bài5</title>
+    <title>bài5</title>
 </head>
 <body>
 <script>
-    // chưa xong
-    // let size = parseInt(prompt('Nhập độ dài mảng: '));
-    // let arr = [];
-    // let arr2=[];
-    // for (let i = 0; i < size; i++) {
-    //     arr[i] = parseInt(prompt('Nhập phần tử thứ ' + i + ' của mảng'));
-    //     for (let j = 0; j < size; j++) {
-    //         if (arr[j] < 0) {
-    //             arr2+=arr[j];
-    //         }
-    //         else {arr2="không có số nguyên âm trong mảng"}
-    //     }
-    // }
-    // document.write('Mảng : ' + arr + '<br>');
-    // document.write("Mảng số âm là: "+arr2)
-
+    let n=parseInt(prompt("Nhập vào số phần tử của mảng"));
+    let arr=[];
+    let arr2=[];
+    let count=0;
+    for(let i=0;i<n;i++){
+        arr[i]=prompt("Nhập vào phần tử thứ: "+i+" "+"của mảng");
+        if(arr[i]<0){
+            arr2.push(arr[i]);
+            count++;
+        }
+    }
+    document.write("Số số nguyên âm của mảng là: " + count+"<br>");
+    document.write("Các số nguyên âm của mảng là: " + arr2);
 </script>
+
 </body>
 </html>

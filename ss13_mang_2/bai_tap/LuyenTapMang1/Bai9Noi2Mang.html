@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài9</title>
+</head>
+<body>
+<script>
+    let arra = new Array(10);
+    let arrb = new Array(10);
+    let arrc = [];
+    for (let i = 0; i < 10; i++) {
+        arra[i] = parseInt(prompt("Nhập phần tử thứ " + i + " của mảng a"));
+    }
+    for (let j = 0; j < 10; j++) {
+        arrb[j] = parseInt(prompt("Nhập phần tử thứ " + j + " của mảng b"));
+    }
+    document.write("mảng a: " + arra + "<br>");
+    document.write("mảng b: " + arrb + "<br>");
+    arrc=arrb.concat(arra);
+    document.write("mảng sau khi nối: " + arrc);
+</script>
+</body>
+</html>
