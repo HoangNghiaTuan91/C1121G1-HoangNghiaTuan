@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi</title>
+</head>
+<body>
+<input type="text" id="met" placeholder="Nhập độ dài theo mét">
+<input type="button" onclick="meterToFoot()" value="To feet">
+<br>
+<br>
+<input type="text" id="feet" placeholder="Nhập độ dài theo feet">
+<input type="button" onclick="footToMeter()" value="To meters">
+<p id="ketQuaFeet"></p><br>
+<p id="ketQuaMet"></p>
+
+<script>
+
+    function footToMeter() {
+        let b = parseInt(document.getElementById("feet").value);
+        let meter = 0.305 * b;
+        document.getElementById("ketQuaMet").innerText = meter;
+    }
+
+    function meterToFoot() {
+        let a = parseInt(document.getElementById("met").value);
+        let foot = 3.279 * a;
+        document.getElementById("ketQuaFeet").innerText = foot;
+    }
+
+</script>
+</body>
+</html>

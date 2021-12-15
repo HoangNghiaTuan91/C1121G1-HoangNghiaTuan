@@ -9,8 +9,10 @@
     let a = prompt('Nhập chuỗi các từ hoặc 1 câu');
     let b = 0;
     let arr = a.split(' ');
-    for (let i = 0; i < arr.length; i++){
-        b++;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] != '') {
+            b++;
+        }
     }
     document.write('Chuỗi a: ' + arr + '<br>');
     document.write('Chuỗi có ' + b + ' từ');
