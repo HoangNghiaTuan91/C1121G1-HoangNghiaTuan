@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let l = parseInt(prompt("Nhập độ dài của mảng"));
+    for (let i = 0; i < l; i++) {
+        arr[i] = prompt("Nhập phần tử thứ " + i + " của mảng");
+    }
+    document.write("Mảng lúc đầu: " + arr + "<br>");
+    reverseArray(arr);
+    document.write("Mảng lúc sau: " + arr + "<br>");
+
+    function reverseArray(arr) {
+        let left = 0;
+        let right = l - 1;
+        while (left < right) {
+            let temp;
+            temp = arr[left];
+            arr[left] = arr[right];
+            arr[right] = temp;
+            left++;
+            right--;
+        }
+    }
+</script>
+</body>
+</html>

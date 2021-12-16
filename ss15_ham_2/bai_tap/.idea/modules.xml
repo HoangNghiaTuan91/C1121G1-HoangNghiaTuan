@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/bai_tap.iml" filepath="$PROJECT_DIR$/.idea/bai_tap.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../ss11_cau_truc_lap_2/bai_tap/.idea/bai_tap.iml" filepath="$PROJECT_DIR$/../../ss11_cau_truc_lap_2/bai_tap/.idea/bai_tap.iml" />
       <module fileurl="file://$PROJECT_DIR$/luyen_tap_1/.idea/luyen_tap_1.iml" filepath="$PROJECT_DIR$/luyen_tap_1/.idea/luyen_tap_1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/luyen_tap_2/.idea/luyen_tap_2.iml" filepath="$PROJECT_DIR$/luyen_tap_2/.idea/luyen_tap_2.iml" />
       <module fileurl="file://$PROJECT_DIR$/../../ss14_ham/thuc_hanh/.idea/thuc_hanh.iml" filepath="$PROJECT_DIR$/../../ss14_ham/thuc_hanh/.idea/thuc_hanh.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../case_study/yeucau1/.idea/yeucau1.iml" filepath="$PROJECT_DIR$/../../../case_study/yeucau1/.idea/yeucau1.iml" />
     </modules>
   </component>
 </project>

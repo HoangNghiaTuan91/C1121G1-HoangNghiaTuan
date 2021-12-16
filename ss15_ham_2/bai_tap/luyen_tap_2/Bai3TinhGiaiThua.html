@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài3</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt("Nhập vào 1 số"));
+    function giaiThua() {
+        let f = 1;
+        if (a === 0 || a === 1) {
+            alert("Giai thừa = " + f);
+        } else if (a > 1) {
+            for (let i = 2; i <= a; i++) {
+                f = f * i;
+            }
+            alert("Giai thừa của " + a + " = " + f);
+        }
+    }
+        giaiThua();
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài5</title>
+</head>
+<body>
+<script>
+    let ngoiSao = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let chomSao = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+    let a = prompt("Nhập vào tên 1 ngôi sao");
+
+    function timKiemSao() {
+        let check = false;
+        for (let i = 0; i < ngoiSao.length; i++) {
+            if (a === ngoiSao[i]) {
+                alert("Ngôi sao " + ngoiSao[i] + " thuộc chòm sao " + chomSao[i]);
+                check = true;
+                break;
+            }
+        }
+        if (!check) {
+            alert("không có ngôi sao nào như vậy trong chòm sao")
+        }
+    }
+
+    timKiemSao();
+
+</script>
+</body>
+</html>

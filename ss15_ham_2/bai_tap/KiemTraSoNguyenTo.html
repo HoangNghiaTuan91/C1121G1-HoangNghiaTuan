@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Số nguyên tố</title>
+</head>
+<body>
+<script>
+    function soNguyenTo(number) {
+        let check = true;
+        for (let i = 2; i <= Math.sqrt(number); i++) {
+            if (number % i === 0 && number > 2) {
+                return check = false;
+            }
+        }
+        return check;
+    }
+
+    let arr = [];
+    let n = 2;
+    while (n < 10000) {
+        if (soNguyenTo(n)) {
+            arr.push(n);
+        }
+        n++;
+    }
+    document.write("Dãy số nguyên tố <10000: "+arr);
+</script>
+</body>
+</html>
