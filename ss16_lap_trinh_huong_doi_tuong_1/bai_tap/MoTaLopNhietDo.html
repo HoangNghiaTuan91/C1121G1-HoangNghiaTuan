@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhiệt độ</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        constructor(Celsius) {
+            this.Celsius = Celsius;
+        }
+        getFahrenheit () {
+            return (this.Celsius - 32) / 1.8;
+        }
+        getKenvin () {
+            return (this.Celsius + 273.15);
+        }
+        setCelsius (Celsius) {
+            this.Celsius = Celsius;
+        }
+    }
+    let temperature = new Temperature(20);
+    let f = temperature.getFahrenheit();
+    let k = temperature.getKenvin();
+    alert("Khi độ C là: " + temperature.Celsius  + " thì độ F là: " + f + " và độ K là: " + k);
+
+    temperature.setCelsius(40);
+</script>
+</body>
+</html>

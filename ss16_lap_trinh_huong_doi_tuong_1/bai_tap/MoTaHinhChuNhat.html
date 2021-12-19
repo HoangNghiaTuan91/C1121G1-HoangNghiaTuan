@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<canvas id="myCanvas" width="200" height="100"></canvas>
+<head>
+    <meta charset="UTF-8">
+    <title>Hình chữ nhật</title>
+</head>
+<body>
+<script>
+    class Rectangle {
+        constructor(width, height) {
+            this.width = width;
+            this.height = height;
+        }
+
+        getHeight() {
+            return this.height;
+        }
+
+        getWidth() {
+            return this.width;
+        }
+
+        getArea() {
+            return this.height * this.width;
+        }
+
+        getPerimeter() {
+            return (this.height + this.width) * 2;
+        }
+
+        setHeight(chieuCao) {
+            this.height = chieuCao;
+        }
+
+        setWidth(chieuRong) {
+            this.width = chieuRong;
+        }
+
+        display() {
+            let ctx = document.getElementById("myCanvas").getContext("2d");
+            ctx.rect(0, 0, this.width, this.height);
+            ctx.stroke();
+        }
+    }
+
+    let rectangle = new Rectangle(100, 50);
+    let width = rectangle.getWidth();
+    let height = rectangle.getHeight();
+    let area = rectangle.getArea();
+    let perimeter = rectangle.getPerimeter();
+   alert("Hình chữ nhật có chiều rộng "+width+" và chiều cao "+height+" có chu vi "+perimeter+" và diện tích "+area);
+   rectangle.display();
+
+   // rectangle.setWidth(150);
+   // rectangle.setHeight(25);
+
+</script>
+</body>
+</html>

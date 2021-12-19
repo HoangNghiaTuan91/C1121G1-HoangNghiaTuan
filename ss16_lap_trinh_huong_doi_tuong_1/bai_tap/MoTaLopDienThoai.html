@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Điện thoại</title>
+</head>
+<body>
+<script>
+    class Mobile {
+        constructor(name, battery, draft, memoryinbox, memoryoutbox) {
+            this.name = name;
+            this.battery = battery;
+            this.draft = draft;
+            this.memoryinbox = memoryinbox;
+            this.memoryoutbox = memoryoutbox;
+            this.outbox_message = [];
+            this.inbox_message = [];
+            this.message="";
+        }
+
+        onOff() {
+            if (this.battery > 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        turnOn() {
+            alert("Điện thoại đang bật")
+        }
+
+        turnOff() {
+            alert("Điện thoại đang tắt")
+        }
+
+        batteryCharge() {
+        }
+
+        setMessage(tinNhan) {
+            this.message = tinNhan;
+        }
+
+        getMessage() {
+        }
+
+        sendMessage() {
+        }
+
+        receiveMessage() {
+        }
+
+        viewInbox() {
+        }
+
+        viewSentMessage() {
+        }
+
+        afterUse() {
+
+        }
+        mobileOff(){
+
+        }
+    }
+</script>
+</body>
+</html>

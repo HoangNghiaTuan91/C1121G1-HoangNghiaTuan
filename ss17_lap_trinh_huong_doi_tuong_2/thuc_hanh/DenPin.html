@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đèn&Pin</title>
+</head>
+<body>
+<script>
+    class Battery {
+        constructor(energy) {
+            this.energy = energy;
+        }
+
+        getEnergy() {
+            return this.energy;
+        }
+
+        setEnergy(nangLuong) {
+            this.energy = nangLuong;
+        }
+
+        decreaseEnergy() {
+            if (this.energy > 0) {
+                this.energy--;
+            }
+        }
+    }
+
+    class FlashLamp {
+        constructor(status, battery,light) {
+            this.status = status;
+            this.battery = battery;
+            this.light = light;
+        }
+
+        setBattery(pin) {
+            this.battery = pin;
+        }
+
+        getBattery() {
+            return this.battery.getEnergy();
+        }
+    }
+</script>
+</body>
+</html>

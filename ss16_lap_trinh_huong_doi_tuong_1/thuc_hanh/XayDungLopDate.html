@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Date {
+        constructor(day, month, year) {
+            this.day = day;
+            this.month = month;
+            this.year = year
+        }
+
+        getDay() {
+            return this.day;
+        }
+
+        getMonth() {
+            return this.month;
+        }
+
+        getYear() {
+            return this.year;
+        }
+
+        setDay(ngay) {
+            this.day = ngay;
+        }
+
+        setMonth(thang) {
+            this.month = thang;
+        }
+
+        setYear(nam) {
+            this.year = nam;
+        }
+        setDate(date){
+            return this.day+"//"+this.month+"//"+this.year;
+        }
+    }
+
+    let date = new Date(17, 12, 2021);
+    // let day = date.getDay();
+    // let month = date.getMonth();
+    // let year = date.getYear();
+    // alert(day + "/" + month + "/" + year);
+    date.setDay(18);
+    date.setMonth(12);
+    date.setYear(2021);
+    day = date.getDay();
+    month = date.getMonth();
+    year = date.getYear();
+    alert(day + "/" + month + "/" + year);
+    document.getElementById(date.getDate()).innerHTML;
+</script>
+</body>
+</html>

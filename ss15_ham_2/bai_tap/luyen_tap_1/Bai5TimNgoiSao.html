@@ -10,11 +10,11 @@
     let chomSao = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
     let a = prompt("Nhập vào tên 1 ngôi sao");
 
-    function timKiemSao() {
+    function timKiemSao(s,mang1,mang2) {
         let check = false;
-        for (let i = 0; i < ngoiSao.length; i++) {
-            if (a === ngoiSao[i]) {
-                alert("Ngôi sao " + ngoiSao[i] + " thuộc chòm sao " + chomSao[i]);
+        for (let i = 0; i < mang1.length; i++) {
+            if (s === mang1[i]) {
+                alert("Ngôi sao " + mang1[i] + " thuộc chòm sao " + mang2[i]);
                 check = true;
                 break;
             }
@@ -24,7 +24,7 @@
         }
     }
 
-    timKiemSao();
+    timKiemSao(a,ngoiSao,chomSao);
 
 </script>
 </body>
