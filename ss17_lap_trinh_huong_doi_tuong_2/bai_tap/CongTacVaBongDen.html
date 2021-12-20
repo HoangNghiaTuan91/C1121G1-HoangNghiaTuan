@@ -6,7 +6,52 @@
 </head>
 <body>
 <script>
+    class ElectricLamp {
+        constructor(status) {
+            this.status = status;
+        }
 
+        turnOn() {
+            this.status = true;
+            alert("đèn bật");
+        }
+
+        turnOff() {
+            this.status = false;
+            alert("đèn tắt");
+        }
+    }
+
+    class SwitchButton {
+        constructor(status) {
+            this.status = status;
+        }
+
+        connectToLamp(ElectricLamp) {
+            if (this.status) {
+                ElectricLamp.turnOn()
+            } else {
+                ElectricLamp.turnOff()
+            }
+        }
+
+        switchOn() {
+            return this.status = true;
+        }
+
+        switchOff() {
+            return this.status = false;
+        }
+    }
+    let electriclamp = new ElectricLamp(false);
+    let switchbutton = new SwitchButton(false);
+    for(let i = 0;i<5;i++){
+        switchbutton.switchOn();
+        switchbutton.connectToLamp(electriclamp);
+        switchbutton.switchOff();
+        switchbutton.connectToLamp(electriclamp);
+        alert("lần thứ "+(i+1));
+    }
 </script>
 </body>
 </html>
