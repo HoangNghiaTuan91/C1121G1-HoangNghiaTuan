@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Apple {
+        constructor(weight) {
+            this.weight = weight;
+        }
+
+        setWeightApple(weight) {
+            this.weight = weight;
+        }
+
+        getWeightApple() {
+            return this.weight;
+        }
+
+        isEmpty() {
+            if (this.weight != 0) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+    }
+
+    class Human {
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+            this.say = "";
+
+        }
+
+        isMale() {
+            if (this.gender == "Nam") {
+                return true
+            } else if (this.gender == "Nữ") {
+                return false;
+            }
+        }
+
+        speak(say) {
+            this.say = say;
+        }
+
+        eat(apple) {
+            if (this.checkApple(apple)) {
+                this.weight++;
+                apple.weight--;
+            } else {
+                document.write("Quả táo đã hết hoặc không tồn tại");
+            }
+
+        }
+
+        checkApple(apple) {
+            if (!apple.isEmpty()) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        setGender(gioiTinh) {
+            this.gender = gioiTinh;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        setWeight(weight) {
+            this.weight = weight;
+        }
+    }
+
+    let apple = new Apple();
+    let adam = new Human("a", "nam", 0);
+    let eva = new Human("Eva", "nữ", 40);
+    adam.setName("Adam");
+    adam.setWeight(50);
+    apple.setWeightApple(10);
+    adam.speak(prompt("Vui lòng nhập lời Adam muốn nói đến Eva ^^"));
+    document.write("Adam nói: " + adam.say + "<br>");
+    document.write("cân nặng của adam là: " + adam.getWeight() + "<br>");
+    document.write("cân nặng của eva là: " + eva.getWeight() + "<br>");
+    document.write("cân nặng của quả táo là: " + apple.getWeightApple() + "<br>");
+    while (!apple.isEmpty()) {
+        adam.eat(apple);
+        eva.eat(apple);
+        document.write("Sau khi ăn táo,cân nặng của adam: " + adam.getWeight() + " ,eva là " + eva.getWeight() + " và quả táo là " + apple.getWeightApple() + "<br>")
+    }
+
+
+</script>
+</body>
+</html>

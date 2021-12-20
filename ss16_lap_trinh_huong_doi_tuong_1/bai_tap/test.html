@@ -1,0 +1,50 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Phát triển chương trình thể hiện sự tương tác giữa hai đối tượng: công tắc và bóng đèn</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<script>-->
+<!--    class ElectricLamp {-->
+<!--        constructor(status) {-->
+<!--            this.status = status;-->
+<!--        }-->
+<!--        turnOff () {-->
+<!--            this.status = false;-->
+<!--            alert("Đèn tắt");-->
+<!--        }-->
+<!--        turnOn () {-->
+<!--            this.status = true;-->
+<!--            alert("Đèn bật");-->
+<!--        }-->
+<!--    }-->
+<!--    class SwitchButton {-->
+<!--        constructor(status) {-->
+<!--            this.status = status;-->
+<!--        }-->
+<!--        connectToLamp (ElectricLamp) {-->
+<!--            if (this.status) {-->
+<!--                ElectricLamp.turnOn();-->
+<!--            } else {-->
+<!--                ElectricLamp.turnOff();-->
+<!--            }-->
+<!--        }-->
+<!--        switchOff () {-->
+<!--            return this.status = false;-->
+<!--        }-->
+<!--        switchOn () {-->
+<!--            return this.status = true;-->
+<!--        }-->
+<!--    }-->
+<!--    let electric_lamp = new ElectricLamp(false);-->
+<!--    let switch_button = new SwitchButton(false);-->
+<!--    for (let i = 0; i < 5; i++) {-->
+<!--        switch_button.switchOn();-->
+<!--        switch_button.connectToLamp(electric_lamp);-->
+<!--        switch_button.switchOff();-->
+<!--        switch_button.connectToLamp(electric_lamp);-->
+<!--    }-->
+<!--</script>-->
+<!--</body>-->
+<!--</html>-->

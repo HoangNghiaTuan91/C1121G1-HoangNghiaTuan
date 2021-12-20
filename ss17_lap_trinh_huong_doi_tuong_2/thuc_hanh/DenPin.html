@@ -6,41 +6,57 @@
 </head>
 <body>
 <script>
-    class Battery {
-        constructor(energy) {
-            this.energy = energy;
+    class Battery{
+        constructor() {
+            this.energy=100
         }
-
-        getEnergy() {
+        setEnergy(energy){
+            this.energy =energy;
+        }
+        getEnergy(){
             return this.energy;
         }
-
-        setEnergy(nangLuong) {
-            this.energy = nangLuong;
-        }
-
-        decreaseEnergy() {
-            if (this.energy > 0) {
+        decreaseEnergy(){
+            if (this.energy>0){
                 this.energy--;
             }
         }
     }
-
-    class FlashLamp {
-        constructor(status, battery,light) {
-            this.status = status;
-            this.battery = battery;
-            this.light = light;
+    class FlashLamp{
+        constructor() {
+            this.status=false;
+            this.battery=null;
         }
-
-        setBattery(pin) {
-            this.battery = pin;
+        setBattery(battery){
+            this.battery=battery;
         }
-
-        getBattery() {
+        getBatteryInfo(){
             return this.battery.getEnergy();
         }
+        light(){
+            if (this.status){
+                alert("đèn đang sáng")
+            }else {
+                alert("đèn đang tắt")
+            }
+        }
+        turnOn(){
+            this.battery.decreaseEnergy();
+            this.status=true;
+        }
+        turnOff(){
+            this.status=false;
+        }
     }
+    let pin = new Battery();
+    let den = new FlashLamp();
+    den.setBattery(pin);
+    den.light();
+    den.turnOn();
+    den.light();
+    den.turnOff();
+    den.light();
+    alert(pin.getEnergy())
 </script>
 </body>
 </html>
