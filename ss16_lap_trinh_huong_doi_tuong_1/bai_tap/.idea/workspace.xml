@@ -20,6 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59cb55b3-fb5b-4abd-8d23-c24825dcd035" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../case_study/yeu_cau_5/Bai1TimTongSoChanTrongMang2Chieu.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/yeu_cau_5/Bai1TimTongSoChanTrongMang2Chieu.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -39,7 +40,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="ProjectId" id="22YNkWkILxKCJFvFsJ1gS3HUugj" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -50,7 +53,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../case_study/yeucau3" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../case_study/yeu_cau_5" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -64,7 +67,7 @@
       <updated>1640010703385</updated>
       <workItem from="1640010707815" duration="2107000" />
       <workItem from="1640049493266" duration="14269000" />
-      <workItem from="1640135930916" duration="19205000" />
+      <workItem from="1640135930916" duration="24977000" />
     </task>
     <servers />
   </component>
@@ -84,13 +87,17 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1640165489049">
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1640183695341">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1640165489049" />
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1640183695341" />
     <state x="339" y="157" key="run.anything.popup" timestamp="1640060107120">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1640060107120" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1640186658560">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1640186658560" />
   </component>
 </project>

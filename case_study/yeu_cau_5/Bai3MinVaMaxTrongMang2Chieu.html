@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài3</title>
+</head>
+<body>
+<script>
+    //tạo 1 mảng 2 chiều
+    let m = prompt("nhập số 1");
+    let n = prompt("nhập số 2");
+    let arr = [];
+    for (let i = 0; i < m; i++) {
+        arr[i] = []
+        for (let j = 0; j < n; j++) {
+            arr[i][j] = Math.ceil(Math.random() * 100);
+        }
+    }
+    document.write("mảng lúc đầu: " + arr + "<br>");
+
+    //hàm tìm số nhỏ nhất và lớn nhất;
+    function minMax(mang) {
+        let min = mang[0][0];
+        let max = mang[0][0];
+        for (let l = 0; l < mang.length; l++) {
+            for (let k = 0; k < mang[l].length; k++) {
+                if (min > mang[l][k]) {
+                    min = mang[l][k];
+                }
+                if (max < mang[l][k]) {
+                    max = mang[l][k];
+                }
+            }
+        }
+        document.write("min là: " + min + "<br>");
+        document.write("max là: " + max + "<br>");
+    }
+
+    minMax(arr)
+
+</script>
+</body>
+</html>

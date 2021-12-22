@@ -6,14 +6,30 @@
 </head>
 <body>
 <script>
-    let m=prompt("nhập số 1");
-    let n=prompt("nhập số 2");
-    let arr=[];
-    for(let i=0;i<m;i++){
-        for (let j=0;j<n;j++){
-            arr[i][j]=prompt("Nhập phần tử"+i+"."+j+"của mảng")
+    let m = prompt("nhập số 1");
+    let n = prompt("nhập số 2");
+    let arr = [];
+    for (let i = 0; i < m; i++) {
+        arr[i] = []
+        for (let j = 0; j < n; j++) {
+            arr[i][j] = prompt("Nhập phần tử" + i + "." + j + "của mảng");
         }
     }
+    document.write(arr+"<br>");
+
+    function tinhTong(mang) {
+        let result = 0;
+        for (let i = 0; i < mang.length; i++) {
+            for (let j = 0; j < mang[i].length; j++) {
+                if (mang[i][j] % 2 == 0) {
+                    let temp=parseInt(mang[i][j]);
+                    result += temp;
+                }
+            }
+        }
+        document.write("tổng các số chẵn trong mảng là " + result);
+    }
+    tinhTong(arr)
 </script>
 </body>
 </html>
