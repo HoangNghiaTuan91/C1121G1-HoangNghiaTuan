@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài3</title>
+</head>
+<body>
+<script>
+    let n = prompt("nhập kích thước mảng");
+    let arr1 = [];
+    let arr2 = [];
+    for (let i = 0; i < n; i++) {
+        let a = parseInt(prompt("nhập phần tử thứ " + i + " của mảng 1"));
+        arr1.push(a);
+        let b = parseInt(prompt("nhập phần tử thứ " + i + " của mảng 2"));
+        arr2.push(b);
+    }
+    document.write(arr1 + "<br>");
+    document.write(arr2 + "<br>");
+
+    let max = arr1[0] / arr2[0];
+    let maxIndex = 0;
+    let maxShow;
+    for (let i = 0; i < n; i++) {
+            if (max < arr1[i] / arr2[i]) {
+                max = arr1[i] / arr2[i];
+                maxShow = arr1[i] + "/" + arr2[i];
+                maxIndex = i;
+            }
+    }
+    document.write("phân số lớn nhất là : " + maxShow + "<br>");
+    document.write("Chỉ số phân số đó là: " + maxIndex);
+
+// bài 3 mở rộng:cho 2 mảng,duyệt 2 mảng tìm phân số lớn nhất được tạo từ 1 giá trị mảng 1 và 1 giá trị mảng 2,in ra max)
+
+    //
+    // let n = prompt("nhập kích thước mảng 1");
+    // let m = prompt("nhập kích thước mảng 2");
+    // let arr1 = [];
+    // let arr2 = [];
+    // for (let i = 0; i < n; i++) {
+    //     let a = parseInt(prompt("nhập phần tử thứ " + i + " của mảng 1"));
+    //     arr1.push(a);
+    // }
+    // for (let j = 0; j < m; j++) {
+    //     let b = parseInt(prompt("nhập phần tử thứ " + j + " của mảng 2"));
+    //     arr2.push(b);
+    // }
+    // document.write(arr1 + "<br>");
+    // document.write(arr2 + "<br>");
+    //
+    // let max = arr1[0] / arr2[0];
+    // // let maxIndex = 0;
+    // let maxShow;
+    // for (let i = 0; i < n; i++) {
+    //     for(let j = 0; j < m; j++)
+    //     if (max < arr1[i] / arr2[j]) {
+    //         max = arr1[i] / arr2[j];
+    //         maxShow = arr1[i] + "/" + arr2[j];
+    //         // maxIndex = i;
+    //     }
+    //
+    // }
+    // document.write("phân số lớn nhất là : " + maxShow + "<br>");
+    // // document.write("Chỉ số phân số đó là: " + maxIndex);
+
+</script>
+</body>
+</html>

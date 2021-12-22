@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lương và thuế</title>
+</head>
+<body>
+<script>
+    let salary = parseInt(prompt("Nhập lương của bạn"));
+    if (salary >= 15000000) {
+        salary = salary - salary * 20 / 100;
+        alert("Thuế thu nhập cá nhân là 20% và lương thực nhận: " + salary.toLocaleString());
+    } else if (salary >= 7000000) {
+        salary = salary - salary * 10 / 100;
+        alert("Thuế thu nhập cá nhân là 10% và lương thực nhận: " + salary.toLocaleString());
+    } else {
+        salary = salary - salary * 5 / 100;
+        alert("Thuế thu nhập cá nhân là 5% và lương thực nhận: " + salary.toLocaleString());
+    }
+</script>
+</body>
+</html>

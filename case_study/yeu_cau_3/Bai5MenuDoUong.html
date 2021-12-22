@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài5</title>
+</head>
+<body>
+<script>
+    let order;
+    let total = 0;
+    do {
+        order = parseInt(prompt("Nhập số thứ tự đồ uống bạn chọn vào đây(1-6),số 7 để thoát"));
+        switch (order) {
+            case 1:
+                alert("Bạn chọn cà phê");
+                alert("Đơn giá là: 20000");
+                let soLuong1 = parseInt(prompt("Nhập số lượng đồ uống"));
+                total += 20000 * soLuong1;
+                break;
+            case 2:
+                alert("Bạn chọn cam vắt");
+                alert("Đơn giá là: 50000");
+                let soLuong2 = parseInt(prompt("Nhập số lượng đồ uống"));
+                total += 50000 * soLuong2;
+                break;
+            case 3:
+                alert("Bạn chọn nước ép cà rốt");
+                alert("Đơn giá là: 30000");
+                let soLuong3 = parseInt(prompt("Nhập số lượng đồ uống"));
+                total += 30000 * soLuong3;
+                break;
+            case 4:
+                alert("Bạn chọn nước ép cà chua");
+                alert("Đơn giá là: 25000");
+                let soLuong4 = parseInt(prompt("Nhập số lượng đồ uống"));
+                total += 25000 * soLuong4;
+                break;
+            case 5:
+                alert("Bạn chọn nước lọc");
+                alert("Đơn giá là: 15000");
+                let soLuong5 = parseInt(prompt("Nhập số lượng đồ uống"));
+                total += 15000 * soLuong5;
+                break;
+            case 6:
+                alert("Bạn chọn nước dừa");
+                alert("Đơn giá là: 45000");
+                let soLuong6 = parseInt(prompt("Nhập số lượng đồ uống"));
+                total += 45000 * soLuong6;
+                break;
+        }
+    } while (order != 7)
+
+
+    document.writeln("số tiền bạn phải thanh toán là "+total);
+</script>
+</body>
+</html>

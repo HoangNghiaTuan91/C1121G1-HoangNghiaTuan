@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài1</title>
+</head>
+<body>
+<script>
+    let string = prompt("Nhập một xâu kí tự: ");
+    let arr = string.trim().split("");
+    let arr1 = [];
+
+    function transfer(mang, mangMoi) {
+        mangMoi.push(mang[0].toUpperCase());
+        for (let i = 1; i < mang.length; i++) {
+            if (mang[i - 1] == " ") {
+                mangMoi.push(mang[i].toUpperCase());
+            } else {
+                mangMoi.push(mang[i].toLowerCase());
+            }
+        }
+    }
+
+    transfer(arr, arr1);
+    let chuanHoa = arr1.join("")
+    document.write("Xâu sau khi chuẩn hóa là : " + chuanHoa + "<br>")
+
+    let arr2 = chuanHoa.split(" ");
+    document.write(arr2 + "<br>");
+    let a;
+    let b;
+
+    function getMaxString(array, longestWord, result) {
+        longestWord = array[0].length;
+        result = array[0];
+        for (let i = 1; i < array.length; i++) {
+            if (longestWord < array[i].length) {
+                longestWord = array[i].length;
+                result = array[i];
+            }
+        }
+        document.write("từ dài nhất: " + result)
+    }
+
+    getMaxString(arr2, a, b)
+
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài3</title>
+</head>
+<body>
+<script>
+    let arr1 = prompt("Nhập chuỗi 1");
+    let arr2 = prompt("Nhập chuỗi 2");
+    let arrA = arr1.split("");
+    let arrB = arr2.split("");
+    document.write(arrA + "<br>");
+    document.write(arrB + "<br>");
+    let count = 0;
+    for (let i = 0; i < arrA.length; i++) {
+        for (let j = 0; j < arrB.length; j++) {
+            if (arrA[i] == arrB[j]) {
+                count++;
+                arrB.slice(j, 1);
+                break;
+            }
+        }
+    }
+    document.write("Số kí tự chung" + count+"<br>");
+</script>
+</body>
+</html>

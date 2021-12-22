@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài1</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt("Nhập vào số phần tử mảng a "));
+    let a = [];
+    let b = [];
+    for (let i = 0; i < n; i++) {
+        a[i] = parseInt(prompt("Nhập vào số nguyên thứ :" + i));
+    }
+    document.write("Mảng a là: [" +a+" ]");
+    let sum = 0;
+    for (let j = 0; j < n; j++) {
+        sum += a[j];
+        b[j] = sum;
+    }
+    document.write("</br>")
+    document.write("Mảng b là: [" +b+" ]");
+</script>
+
+</body>
+</html>
