@@ -7,44 +7,53 @@
 <body>
 <script>
     let numbers = prompt("nhập số cần chuyển qua chuỗi");
+    let mangSo=[0,1,2,3,4,5,6,7,8,9]
+    let mangChu =["không","một","hai","ba","bốn","năm","sáu","bảy","tám","chín"]
     let result = "";
     for (let i = 0; i < numbers.length; i++) {
-        switch (numbers[i]) {
-
-            case "0":
-                result += "không,";
-                break;
-            case "1":
-                result += "một,";
-                break;
-            case "2":
-                result += "hai,";
-                break;
-            case "3":
-                result += "ba,";
-                break;
-            case "4":
-                result += "bốn,";
-                break;
-            case "5":
-                result += "năm,";
-                break;
-            case "6":
-                result += "sáu,";
-                break;
-            case "7":
-                result += "bảy,";
-                break;
-            case "8":
-                result += "tám,";
-                break;
-            case "9":
-                result += "chín,";
-                break;
+        for (let j = 0; j < mangSo.length; j++) {
+            if (numbers[i] == mangSo[j]) {
+                result += mangChu[j]+" ";
+            }
         }
     }
     document.writeln(numbers + "<br>");
     document.writeln(result);
+    //     switch (numbers[i]) {
+    //
+    //         case "0":
+    //             result += "không,";
+    //             break;
+    //         case "1":
+    //             result += "một,";
+    //             break;
+    //         case "2":
+    //             result += "hai,";
+    //             break;
+    //         case "3":
+    //             result += "ba,";
+    //             break;
+    //         case "4":
+    //             result += "bốn,";
+    //             break;
+    //         case "5":
+    //             result += "năm,";
+    //             break;
+    //         case "6":
+    //             result += "sáu,";
+    //             break;
+    //         case "7":
+    //             result += "bảy,";
+    //             break;
+    //         case "8":
+    //             result += "tám,";
+    //             break;
+    //         case "9":
+    //             result += "chín,";
+    //             break;
+    //     }
+    // }
+
    
 </script>
 </body>

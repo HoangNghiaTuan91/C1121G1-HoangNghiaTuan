@@ -10,9 +10,10 @@
     let n = prompt("nhập số 2");
     let arr = [];
     for (let i = 0; i < m; i++) {
-        arr[i] = []
+        arr[i] = [];
         for (let j = 0; j < n; j++) {
-            arr[i][j] = prompt("Nhập phần tử" + i + "." + j + "của mảng");
+            // arr[i][j] = prompt("Nhập phần tử" + i + "." + j + "của mảng");
+            arr[i][j] = Math.ceil(Math.random() * 100);
         }
     }
     document.write(arr+"<br>");
@@ -29,7 +30,7 @@
         }
         document.write("tổng các số chẵn trong mảng là " + result);
     }
-    tinhTong(arr)
+    tinhTong(arr);
 </script>
 </body>
 </html>

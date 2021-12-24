@@ -16,9 +16,8 @@
     for (let i = 0; i < arrA.length; i++) {
         for (let j = 0; j < arrB.length; j++) {
             if (arrA[i] == arrB[j]) {
+                arrB.splice(j, 1);
                 count++;
-                arrB.slice(j, 1);
-                break;
             }
         }
     }

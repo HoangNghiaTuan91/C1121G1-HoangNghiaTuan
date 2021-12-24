@@ -3,8 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../../ss13_mang_2/bai_tap/luyen_tap_2/.idea/LuyenTapMang2.iml" filepath="$PROJECT_DIR$/../../ss13_mang_2/bai_tap/luyen_tap_2/.idea/LuyenTapMang2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../../.idea/asus.iml" filepath="$PROJECT_DIR$/../../../../.idea/asus.iml" />
       <module fileurl="file://$PROJECT_DIR$/../../ss17_lap_trinh_huong_doi_tuong_2/bai_tap/.idea/bai_tap.iml" filepath="$PROJECT_DIR$/../../ss17_lap_trinh_huong_doi_tuong_2/bai_tap/.idea/bai_tap.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../../../case_study/yeu_cau_4/.idea/yeu_cau_4.iml" filepath="$PROJECT_DIR$/../../../case_study/yeu_cau_4/.idea/yeu_cau_4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../case_study/yeu_cau_4/.idea/yeu_cau_4.iml" filepath="$PROJECT_DIR$/../../case_study/yeu_cau_4/.idea/yeu_cau_4.iml" />
       <module fileurl="file://$PROJECT_DIR$/../../case_study/yeu_cau_5/.idea/yeu_cau_5.iml" filepath="$PROJECT_DIR$/../../case_study/yeu_cau_5/.idea/yeu_cau_5.iml" />
       <module fileurl="file://$PROJECT_DIR$/../../../case_study/yeucau3/.idea/yeucau3.iml" filepath="$PROJECT_DIR$/../../../case_study/yeucau3/.idea/yeucau3.iml" />
     </modules>
