@@ -5,6 +5,86 @@
     <title>Title</title>
 </head>
 <body>
+<input type="text" placeholder="mã tài khoan" id="maTaiKhoan">
+<input type="text" placeholder="Chủ Tài khoản" id="chuTaiKhoan">
+<input type="text" placeholder="Tên Ngân Hàng" id="tenNganHang">
+<input type="number" placeholder="Tổng Số tiền" id="tongTien">
+<input type="button" id="them" onclick="themMoi()" value="Thêm mới">
+<p id="hienThi"></p>
+<script>
+    class NganHang {
+        constructor(maTaiKhoan, chuTaiKhoan, tenNganHang, tongTien) {
+            this.maTaiKhoan = maTaiKhoan;
+            this.chuTaiKhoan = chuTaiKhoan;
+            this.tenNganHang = tenNganHang;
+            this.tongTien = tongTien;
+        }
 
+        setMaTaiKhoan(maTaiKhoan) {
+            this.maTaiKhoan = maTaiKhoan;
+        }
+
+        getMaTaiKhoan() {
+            return this.maTaiKhoan;
+        }
+
+        setChuTaiKhoan(chuTaiKhoan) {
+            this.chuTaiKhoan = chuTaiKhoan;
+        }
+
+        getChuTaiKhoan() {
+            return this.chuTaiKhoan;
+        }
+
+        setTenNganHang(tenNganHang) {
+            this.tenNganHang = tenNganHang;
+        }
+
+        getTenNganHang() {
+            return this.tenNganHang;
+        }
+
+        setTongTien(tongTien) {
+            this.tongTien = tongTien;
+        }
+
+        getTongTien() {
+            return this.tongTien;
+        }
+    }
+
+let h1=new NganHang("01","anh A","abc",100000);
+let h2=new NganHang("02","anh B","def",150000);
+let h3=new NganHang("03","chị C","ghi",200000);
+let thongTin=[h1,h2,h3];
+hienThi(thongTin);
+    function themMoi() {
+        let maTaiKhoan = document.getElementById("maTaiKhoan").value;
+        let chuTaiKhoan = document.getElementById("chuTaiKhoan").value;
+        let tenNganHang = document.getElementById("tenNganHang").value;
+        let tongTien = document.getElementById("tongTien").value;
+        let h = new NganHang(maTaiKhoan,chuTaiKhoan,tenNganHang,tongTien);
+        thongTin.push(h);
+        // sau khi thêm mới thì reset lại input
+        document.getElementById("maTaiKhoan").value ="";
+        document.getElementById("chuTaiKhoan").value ="";
+        document.getElementById("tenNganHang").value ="";
+        document.getElementById("tongTien").value ="";
+    }
+        hienThi(thongTin);
+
+function hienThi(danhSach) {
+let bang="<table border=\"1\" style=\"border-collapse: collapse\">\n" +
+    "    <tr>\n" +
+    "        <th>Mã Tài Khoản</th>\n" +
+    "        <th>Chủ Tài Khoản</th>\n" +
+    "        <th>Tên Ngân Hàng</th>\n" +
+    "        <th>Tổng tiền</th>\n" +
+    "    </tr>";
+for (let i=0;i<danhSach.length;i++){
+bang+=
+}
+}
+</script>
 </body>
 </html>
