@@ -20,14 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59cb55b3-fb5b-4abd-8d23-c24825dcd035" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../case_study/yeu_cau_2/Bai2KiemTraNguyenAmPhuAm.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/yeu_cau_2/Bai2KiemTraNguyenAmPhuAm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../case_study/yeu_cau_3/Bai1PrefixSum.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/yeu_cau_3/Bai1PrefixSum.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../case_study/yeu_cau_3/Bai4ChuyenSoSangChu.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/yeu_cau_3/Bai4ChuyenSoSangChu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../case_study/yeu_cau_3/Bai5MenuDoUong.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/yeu_cau_3/Bai5MenuDoUong.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../case_study/yeu_cau_4/Bai1ChuanHoaXauKiTu.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/yeu_cau_4/Bai1ChuanHoaXauKiTu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../case_study/yeu_cau_4/Bai3SoLuongKiTuChung.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/yeu_cau_4/Bai3SoLuongKiTuChung.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../case_study/yeu_cau_5/Bai1TimTongSoChanTrongMang2Chieu.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/yeu_cau_5/Bai1TimTongSoChanTrongMang2Chieu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study/yeu_cau_1/Bai2VeTamGiacVuongRong.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/yeu_cau_1/Bai2VeTamGiacVuongRong.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +68,8 @@
       <workItem from="1640049493266" duration="14269000" />
       <workItem from="1640135930916" duration="25564000" />
       <workItem from="1640221787601" duration="14843000" />
-      <workItem from="1640308250364" duration="9301000" />
+      <workItem from="1640308250364" duration="9975000" />
+      <workItem from="1640398855532" duration="1986000" />
     </task>
     <servers />
   </component>
@@ -95,10 +89,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1640228499331">
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1640414030940">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1640228499331" />
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1640414030940" />
     <state x="292" y="52" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1640223644895">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

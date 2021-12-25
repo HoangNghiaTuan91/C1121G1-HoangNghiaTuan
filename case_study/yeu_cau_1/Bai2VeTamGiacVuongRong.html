@@ -6,45 +6,62 @@
 </head>
 <body>
 <script>
-// cách 1
+    // // cách 1
+    //
+    // for (let i = 1; i <= 5; i++) {
+    //     let a = '';
+    //     if (i === 1 || i === 5) {
+    //         for (let j = 1; j <= i; j++) {
+    //             a += '*';
+    //         }
+    //     } else {
+    //         for (let k = 1; k <= i; k++) {
+    //             if (k === 1 || k === i) {
+    //                 a += '*';
+    //             } else {
+    //                 a += '&ensp;';
+    //             }
+    //         }
+    //     }
+    //     document.write(a + '<br>');
+    // }
+    //
+    // document.write('<br><br>')
+    // // cách 2
+    // for (let i = 1; i <= 5; i++) {
+    //     if (i === 1 || i === 5) {
+    //         for (let j = 1; j <= i; j++) {
+    //             document.write('*' + '')
+    //         }
+    //     } else {
+    //         for (let k = 1; k <= i; k++) {
+    //             if (k === 1 || k === i) {
+    //                 document.write('*' + '')
+    //             } else {
+    //                 document.write('&ensp;' + '');
+    //             }
+    //         }
+    //     }
+    //     document.write('<br>');
+    // }
 
-    for (let i = 1; i <= 5; i++) {
-        let a = '';
-        if (i === 1 || i === 5) {
-            for (let j = 1; j <= i; j++) {
-                a += '*';
-            }
-        } else {
-            for (let k = 1; k <= i; k++) {
-                if (k === 1 || k === i) {
-                    a += '*';
-                } else {
-                    a += '&ensp;';
-                }
+
+    //cách 3
+    let height = parseInt(prompt("Nhập chiều cao"));
+    let shape = "";
+    for (let i = 1; i <= height; i++) {
+        for (let j = 1; j <= height; j++) {
+            if (i === height) {
+                shape += "*";
+            } else if (j === 1 || j === i) {
+                shape += "*";
+            } else {
+                shape += "&ensp;"
             }
         }
-        document.write(a + '<br>');
+        shape += "<br>"
     }
-
-    document.write('<br><br>')
-// cách 2
-    for (let i = 1; i <= 5; i++) {
-        if (i === 1 || i === 5) {
-            for (let j = 1; j <= i; j++) {
-                document.write('*' + '')
-            }
-        } else {
-            for (let k = 1; k <= i; k++) {
-                if (k === 1 || k === i) {
-                    document.write('*' + '')
-                } else {
-                    document.write('&ensp;' + '');
-                }
-            }
-        }
-        document.write('<br>');
-    }
-
+    document.write(shape)
 </script>
 </body>
 </html>
