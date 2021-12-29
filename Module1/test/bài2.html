@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = prompt("Nhập vào 1 chuỗi kí tự");
+    document.write("mảng ban đầu là: " + a + "<br>");
+    document.write(vietTat(a).join(" "));
+    function vietTat(mang) {
+        let mangCat=mang.trim().split("");
+        let mangMoi=[];
+        let check = false;
+        for (let l = 0; l < mangCat.length; l++) {
+            if (mangCat[l] == " ") {
+                check = true;
+                break;
+            } else {
+                check = false;
+            }
+        }
+        if (check == true) {
+            mangMoi.push(mangCat[0].toUpperCase());
+            for (let i = 0; i < mangCat.length; i++) {
+                if (mangCat[i - 1] == " ") {
+                    mangMoi.push(mangCat[i].toUpperCase());
+                }
+            }
+           return mangMoi;
+        } else {
+            alert("mảng chỉ có 1 từ nên ko thể viết tắt");
+        }
+    }
+
+</script>
+</body>
+</html>

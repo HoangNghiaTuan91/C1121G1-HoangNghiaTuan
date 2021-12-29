@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<script>
+    let n = null;
+    let arr = new Array(n);
+    let sum = 0;
+    let count = 0;
+    do {
+        n = prompt('Nhập vào số phần tử của mảng: ');
+    } while (n > 50 || n < 0 || parseInt(n) != n);
+    for (let i = 0; i < n; i++) {
+        arr[i] = parseInt(prompt(`Nhập vào phần tử thứ :` + i));
+    }
+    document.write(`Danh sách các phần tử của mảng vừa nhập là :` + arr);
+    for (let i = 0; i < n; i++) {
+        if (arr[i] % 3 == 0&&arr[i]!=0) {
+            sum += arr[i];
+            count++;
+        }
+        alert(count)
+    }
+    let avg = sum / count;
+    document.write(`kết quả trung bình của các phần tử chia hết cho 3 trong mảng là :` + avg);
+</script>
+</body>
+</html>

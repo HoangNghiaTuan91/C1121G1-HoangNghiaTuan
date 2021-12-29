@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài2</title>
+</head>
+<body>
+<script>
+    function perfectNumber(a) {
+        a = parseInt(prompt("Nhập vào 1 số nguyên"));
+        let sum = 0;
+        for (let i = 0; i < a; i++) {
+            if (a % i == 0) {
+                sum += i;
+            }
+        }
+        if(a==sum){
+            return true;
+        } else {
+            return false;
+        }
+    }
+    document.write("số nhập vào có đúng là số hoàn hảo không?: "+perfectNumber());
+</script>
+</body>
+</html>

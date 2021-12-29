@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../ss11_cau_truc_lap_2/bai_tap/.idea/bai_tap.iml" filepath="$PROJECT_DIR$/../ss11_cau_truc_lap_2/bai_tap/.idea/bai_tap.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/test.iml" filepath="$PROJECT_DIR$/.idea/test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../thi/.idea/thi.iml" filepath="$PROJECT_DIR$/../thi/.idea/thi.iml" />
     </modules>
   </component>
 </project>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính ngày</title>
+</head>
+<body>
+<form>
+    <input type="text" id="month" placeholder="Nhập tháng">
+    <input type="text" id="year" placeholder="Nhập Năm">
+    <input type="button" id="" value="Tính số ngày" onclick="tinhNgay()">
+</form>
+<script>
+    function tinhNgay(month,year) {
+        month = parseInt(document.getElementById('month').value);
+        year = parseInt(document.getElementById('year').value);
+        switch (month) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12: {
+                alert('Tháng ' + month +"/"+" năm"+year+" có 31 ngày ");
+                break;
+            }
+            case 4:
+            case 6:
+            case 9:
+            case 11:{
+                alert('Tháng ' + month +"/"+" năm"+year+" có 31 ngày ");
+                break;
+            }
+            default:{
+                let isLeapYear = false;
+
+                let isDivisibleBy4 = year % 4 == 0;
+                if (isDivisibleBy4) {
+                    let isDivisibleBy100 = year % 100 == 0;
+                    if (isDivisibleBy100) {
+                        let isDivisibleBy400 = year % 400 == 0;
+                        if (isDivisibleBy400) {
+                            isLeapYear = true;
+                        }
+                    } else {
+                        isLeapYear = true;
+                    }
+                }
+
+                if (isLeapYear) {
+                    alert("tháng 2 năm "+year+" có 29 ngày");
+                } else {
+                    alert("tháng 2 năm "+year+" có 28 ngày");
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>

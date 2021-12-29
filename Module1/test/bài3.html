@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = [];
+    let n = parseInt(prompt("Nhập vào số phần tử của mảng"));
+    for (let i = 0; i < n; i++) {
+        array[i] = Math.ceil(Math.random() * 1000);
+    }
+    document.write("mảng ban đầu: " + array.sort(function (a, b) {
+        return a - b
+    }) + "<br>");
+
+    function printFibonannci(array1) {
+        let array2 = [];
+        let c = parseInt(array1[array1.length - 1]);
+        let S = 0, S0 = 0, S1 = 0;
+        for (let j = 0; j < c; j++) {
+            if (j === 0) {
+                S = 1;
+                S1 = 1;
+                array2.push(S);
+            } else {
+                S = S0 + S1;
+                S0 = S1;
+                S1 = S;
+                if (S1 <= c) {
+                    array2.push(S);
+                } else {
+                    break;
+                }
+            }
+        }
+        return array2;
+    }
+
+    document.write("mảng fibonnaci: " + printFibonannci(array) + "<br>");
+
+
+    function check(array1) {
+        let array2 = printFibonannci(array1);
+        let array3 = [];
+        for (let l = 0; l < array1.length; l++) {
+            for (let k = 0; k < array2.length; k++) {
+                if (array1[l] == array2[k]) {
+                    array3.push(array1[l]);
+                }
+            }
+        }
+       return array3;
+    }
+
+    document.write("mảng fibonnaci từ mảng ban đầu: " + check(array));
+
+</script>
+</body>
+</html>
