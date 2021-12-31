@@ -62,6 +62,9 @@ public class NumberToText {
                     case 5:
                         str = "fifteen";
                         break;
+                    case 8:
+                        str = "eighteen";
+                        break;
                     default:
                         str = read1DigitNumber(num2) + "teen";
                         break;
@@ -94,27 +97,13 @@ public class NumberToText {
         int num2 = number % 100;
         String str = "";
         if (num2 == 0 && num1 > 0) {
-            if (num1 == 1) {
-                str = read1DigitNumber(num1) + "hundred";
-            } else {
-                str = read1DigitNumber(num1) + "hundreds";
-            }
-
+            str = read1DigitNumber(num1) + "hundred";
         }
         if (num1 > 0 && num2 <= 9 && num2 > 0) {
-            if (num1 == 1) {
-                str =read1DigitNumber(num1)+ "hundred and " + read1DigitNumber(num2);
-            } else {
-                str = read1DigitNumber(num1) + "hundreds and " + read1DigitNumber(num2);
-            }
+            str =read1DigitNumber(num1)+ "hundred and " + read1DigitNumber(num2);
         }
         if (num1 > 0 && num2 >= 10 && num2 <= 99) {
-            if(num1==1){
-                str = read1DigitNumber(num1) + "hundred and " + read2DigitNumber(num2);
-            }
-            else {
-                str = read1DigitNumber(num1) + "hundreds and " + read2DigitNumber(num2);
-            }
+            str = read1DigitNumber(num1) + "hundred and " + read2DigitNumber(num2);
         }
         return str;
     }
