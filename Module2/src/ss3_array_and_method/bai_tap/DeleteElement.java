@@ -16,22 +16,23 @@ public class DeleteElement {
         System.out.print("Mảng vừa tạo là: " + Arrays.toString(arr));
         System.out.println("\nHãy nhập phần tử cần xóa: ");
         int del = scanner.nextInt();
-        boolean check = false;
-        int indexDel = 0;
+        boolean check = true;
+        int indexDel;
         for (int j = 0; j < arr.length; j++) {
             if (del == arr[j]) {
                 indexDel = j;
-                check = true;
-            } else {
+                if (arr.length - 1 - indexDel >= 0)
+                    System.arraycopy(arr, indexDel + 1, arr, indexDel, arr.length - 1 - indexDel);
+                arr[arr.length - 1] = 0;
+                j--;
+            }
+            else {
                 check = false;
             }
         }
-        if (!check) {
+        if (check) {
             System.out.println("Không có phần tử cần xoá trong mảng");
         } else {
-            if (arr.length - 1 - indexDel >= 0)
-                System.arraycopy(arr, indexDel + 1, arr, indexDel, arr.length - 1 - indexDel);
-            arr[arr.length - 1] = 0;
             System.out.println("Mảng mới là " + Arrays.toString(arr));
         }
     }
