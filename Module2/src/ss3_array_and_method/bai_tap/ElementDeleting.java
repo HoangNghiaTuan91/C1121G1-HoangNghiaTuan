@@ -3,7 +3,7 @@ package ss3_array_and_method.bai_tap;
 import java.util.Scanner;
 import java.util.Arrays;
 
-public class DeleteElement {
+public class ElementDeleting {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Nhập size mảng");

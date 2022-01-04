@@ -3,7 +3,7 @@ package ss3_array_and_method.bai_tap;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class ConnectArray {
+public class ArrayConnecting {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Nhập size mảng thứ 1");
