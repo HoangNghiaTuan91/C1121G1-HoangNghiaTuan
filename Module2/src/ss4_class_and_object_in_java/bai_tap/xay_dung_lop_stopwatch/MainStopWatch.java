@@ -20,10 +20,10 @@ public class MainStopWatch {
         Random random = new Random();
         int[] newArray = new int[100000];
         for (int i = 0; i < 100000; i++) {
-            newArray[i] = random.nextInt(100000);
+            newArray[i] = random.nextInt(1000);
         }
         stopWatch.start();
-        selectionSort(newArray);
+        MainStopWatch.selectionSort(newArray);// hoặc chỉ gọi selectionSort(newArray) cũng được
         stopWatch.stop();
         System.out.println("Sắp xếp mảng gồm 100000 phần tử mất " + stopWatch.getElapsedTime() + " milliseconds");
     }
