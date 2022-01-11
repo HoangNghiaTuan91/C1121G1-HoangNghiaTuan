@@ -1,4 +1,4 @@
-package Furama.models;
+package Furama.models.facility;
 
 public class FreeIncludingService {
     private String nameOfFreeIncludingService;//tên dịch vụ miễn phí

@@ -4,7 +4,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class ColorableTestMain {
-    public static Object getRandomShape() {
+    public static Shape getRandomShape() {
         Random a = new Random();
         int random = a.nextInt(3);
         switch (random) {
@@ -27,17 +27,17 @@ public class ColorableTestMain {
         for (int i = 0; i < size; i++) {
             shapes[i] = (Shape) getRandomShape();
         }
-        System.out.println("trước khi thay đổi kích thước");
         for (Shape shape : shapes) {
             if (shape instanceof Circle) {
-                System.out.println("Hình tròn có diện tích là: "+ ((Circle)shape).getArea());
+                System.out.println("Hình tròn có diện tích là: "+ shape.getArea());
             }
-            if (shape instanceof Rectangle) {
-                System.out.println("Hình tròn có diện tích là: "+ ((Rectangle)shape).getArea());
+             else if (shape instanceof Rectangle) {
+                System.out.println("Hình chữ nhật có diện tích là: "+ shape.getArea());
             }
-            if (shape instanceof Square) {
-                ((Square)shape).howToColor();
+            else if (shape instanceof Square) {
+                ((Square) shape).howToColor();
             }
+
         }
 
     }

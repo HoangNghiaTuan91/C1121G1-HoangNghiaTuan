@@ -1,4 +1,4 @@
-package Furama.models;
+package Furama.models.facility;
 
 public abstract class Facility {
     private String idOfService; // Mã dịch vụ

@@ -1,4 +1,4 @@
-package Furama.models;
+package Furama.models.facility;
 
 public class RentalType {
     private String rentalType;

@@ -1,4 +1,4 @@
-package Furama.models;
+package Furama.models.facility;
 
 public class House extends Facility{
     private String houseStandard;//tiêu chuẩn phòng
@@ -7,7 +7,7 @@ public class House extends Facility{
     public House() {
     }
 
-    public House(String idOfService, String nameOfService, double usableArea, double rentalCost, int maxNumberPeople, String rentalType, String houseStandard, String floorNumber) {
+    public House(String idOfService, String nameOfService, double usableArea, double rentalCost, int maxNumberPeople, RentalType rentalType, String houseStandard, String floorNumber) {
         super(idOfService, nameOfService, usableArea, rentalCost, maxNumberPeople, rentalType);
         this.houseStandard = houseStandard;
         this.floorNumber = floorNumber;

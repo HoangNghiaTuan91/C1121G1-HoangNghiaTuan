@@ -1,4 +1,4 @@
-package Furama.models;
+package Furama.models.facility;
 
 public class Villa extends Facility{
     private String villaStandard;//tiêu chuẩn phòng
@@ -8,9 +8,9 @@ public class Villa extends Facility{
     public Villa() {
     }
 
-    public Villa(String idOfService, String nameOfService, double usableArea, double rentalCost, int maxNumberPeople, String rentalType, String roomStandard, String poolArea, String floorNumber) {
+    public Villa(String idOfService, String nameOfService, double usableArea, double rentalCost, int maxNumberPeople, RentalType rentalType, String villaStandard, String poolArea, String floorNumber) {
         super(idOfService, nameOfService, usableArea, rentalCost, maxNumberPeople, rentalType);
-        this.villaStandard = roomStandard;
+        this.villaStandard = villaStandard;
         this.poolArea = poolArea;
         this.floorNumber = floorNumber;
     }
