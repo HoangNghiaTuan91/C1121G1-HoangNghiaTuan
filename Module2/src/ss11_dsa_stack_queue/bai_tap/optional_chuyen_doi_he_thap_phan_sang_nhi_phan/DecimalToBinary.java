@@ -8,12 +8,21 @@ public class DecimalToBinary {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Nhập vào số nguyên cần chuyển đổi");
         int decimal = Integer.parseInt(scanner.nextLine());
+        int tempDecimal = Math.abs(decimal);
         Stack<Integer> stack = new Stack<>();
-        while (decimal != 0) {
-            int temp = decimal % 2 == 0 ? 0 : 1;
-        stack.push(temp);
-        decimal/=2;
+
+        while (tempDecimal != 0) {
+            int temp = tempDecimal % 2 == 0 ? 0 : 1;
+            stack.push(temp);
+            tempDecimal /= 2;
         }
-        System.out.println(stack);
+        if (decimal < 0) {
+            stack.push(1);
+        }
+        int size = stack.size();
+        for (int i = 0; i < size; i++) {
+            System.out.print(stack.pop() + " ");
+        }
+
     }
 }
