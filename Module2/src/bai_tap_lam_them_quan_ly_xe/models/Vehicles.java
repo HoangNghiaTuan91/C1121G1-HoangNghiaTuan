@@ -50,11 +50,10 @@ public abstract class Vehicles {
 
     @Override
     public String toString() {
-        return "Vehicles{" +
+        return
                 "licensePlate=" + licensePlate +
                 ", manufacturer='" + manufacturer + '\'' +
                 ", manufactureYear=" + manufactureYear +
-                ", owner='" + owner + '\'' +
-                '}';
+                ", owner='" + owner + '\'';
     }
 }

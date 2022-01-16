@@ -21,8 +21,7 @@ public class Motorbike extends Vehicles{
 
     @Override
     public String toString() {
-        return "Motorbike{" +
-                "cubicCentimeter=" + cubicCentimeter +
-                '}';
+        return super.toString()+
+                " cubicCentimeter=" + cubicCentimeter;
     }
 }

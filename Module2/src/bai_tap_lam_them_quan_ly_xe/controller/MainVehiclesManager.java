@@ -21,12 +21,7 @@ public class MainVehiclesManager {
             choice = Integer.parseInt(scanner.nextLine());
             switch (choice) {
                 case 1:
-                    System.out.print("\t1. Add a new truck\n");
-                    System.out.print("\t2. Add a new car\n");
-                    System.out.print("\t3. Add a new motorbike\n");
-                    System.out.print("Choose 1 or 2: ");
-                    int choice1 = Integer.parseInt(scanner.nextLine());
-                    VehiclesManager.addProduct();
+                    VehiclesManager.add();
                     break;
                 case 2:
                     VehiclesManager.deleteProduct();
