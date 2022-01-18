@@ -46,14 +46,6 @@ public class VehiclesManager {
         manufacturerArrayList.add(new Manufacturer("HSX-005", "Ford", "Mỹ"));
         manufacturerArrayList.add(new Manufacturer("HSX-006", "Toyota", "Nhật Bản"));
         manufacturerArrayList.add(new Manufacturer("HSX-007", "Hino", "Nhật Bản"));
-//        Map<Integer,String> manufacturer = new TreeMap<>();
-//        manufacturer.put(1,"Yamaha");
-//        manufacturer.put(2,"Honda");
-//        manufacturer.put(3,"Donfeng");
-//        manufacturer.put(4,"Hyundai");
-//        manufacturer.put(5,"Ford");
-//        manufacturer.put(6,"Toyota");
-//        manufacturer.put(7,"Hino");
     }
 
 
@@ -68,7 +60,7 @@ public class VehiclesManager {
         String deletingLicensePlate = scanner.nextLine().toLowerCase();
         switch (choice) {
             case 1:
-                for(Truck truck:truckArrayList){
+                loopTruck: for(Truck truck:truckArrayList){
                     if (truck.getLicensePlate().toLowerCase().equals(deletingLicensePlate)){
                         System.out.println("Pick 1 option 1 or 2");
                         System.out.println("1. Yes");
@@ -78,19 +70,19 @@ public class VehiclesManager {
                             case 1:
                                 truckArrayList.remove(truck);
                                 System.out.println("Deleting successfully");
-                                break;
+                                break loopTruck;
                             case 2:
                                 break;
                         }
                     }
                     else {
                         System.out.println("Your input license plate is not exist in truck list");
-                        break;
+                        break loopTruck;
                     }
                 }
                 break;
             case 2:
-                for(Car car:carArrayList){
+                loopCar: for(Car car:carArrayList){
                     if (car.getLicensePlate().toLowerCase().equals(deletingLicensePlate)){
                         System.out.println("Pick 1 option 1 or 2");
                         System.out.println("1. Yes");
@@ -100,19 +92,19 @@ public class VehiclesManager {
                             case 1:
                                 carArrayList.remove(car);
                                 System.out.println("Deleting successfully");
-                                break;
+                                break loopCar;
                             case 2:
                                 break;
                         }
                     }
                     else {
                         System.out.println("Your input license plate is not exist in car list");
-                        break;
+                        break loopCar;
                     }
                 }
                 break;
             case 3:
-                for(Motorbike motorbike:motorbikeArrayList){
+                loopBike: for(Motorbike motorbike:motorbikeArrayList){
                     if (motorbike.getLicensePlate().toLowerCase().equals(deletingLicensePlate)){
                         System.out.println("Pick 1 option 1 or 2");
                         System.out.println("1. Yes");
@@ -122,14 +114,14 @@ public class VehiclesManager {
                             case 1:
                                 motorbikeArrayList.remove(motorbike);
                                 System.out.println("Deleting successfully");
-                                break;
+                                break loopBike;
                             case 2:
                                 break;
                         }
                     }
                     else {
                         System.out.println("Your input license plate is not exist in motorbike list");
-                        break;
+                        break loopBike;
                     }
                 }
                 break;
