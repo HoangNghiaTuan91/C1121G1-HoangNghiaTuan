@@ -33,15 +33,14 @@ public class BubbleSortByStep {
                     list[i] = list[i + 1];
                     list[i + 1] = temp;
 
-                    needNextPass = true; /* Next pass still needed */
+                    needNextPass = true;
                 }
             }
-            /* Array may be sorted and next pass not needed */
             if (needNextPass == false) {
                 System.out.println("Array may be sorted and next pass not needed");
                 break;
             }
-            /* Show the list after sort */
+
             System.out.print("List after the  " + k + "' sort: ");
             for (int j = 0; j < list.length; j++) {
                 System.out.print(list[j] + "\t");
