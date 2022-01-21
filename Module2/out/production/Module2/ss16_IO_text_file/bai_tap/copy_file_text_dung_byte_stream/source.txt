@@ -1,0 +1,5 @@
+1, "Ford Explorer", 20000
+2, "Kia Sorento", 6500
+3, "Mazda CX5", 5000
+4, "Kia Carnival", 8000
+5, "Hyundai Tucson", 4800
