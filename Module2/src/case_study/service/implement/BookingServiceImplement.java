@@ -22,7 +22,6 @@ public class BookingServiceImplement implements IBooking {
     @Override
     public void add() {
         TreeSet<Booking> bookingTreeSet = ReadAndWrite.getBookingTreeSet(bookingFilePath);
-//        Queue<Booking> bookingQueue = ReadAndWrite.getBookingQueue(bookingQueueFilePath);
         String iDNameOfService = iDNameOfService();
         String customerCode = customerCodeList();
         Scanner sc = new Scanner(System.in);
@@ -76,8 +75,8 @@ public class BookingServiceImplement implements IBooking {
             Booking booking = new Booking(bookingId, bookingStart, bookingEnd, customerCode, iDNameOfService, bookingTypeService);
             bookingTreeSet.add(booking);
 //            bookingQueue.add(booking);
-            ReadAndWrite.WriteBookingTreeSetToCSV(bookingTreeSet, bookingFilePath, false);
             iFacility.addTimesOfUsing(iDNameOfService);
+            ReadAndWrite.WriteBookingTreeSetToCSV(bookingTreeSet, bookingFilePath, false);
             ReadAndWrite.WriteBookingTreeSetToCSV(bookingTreeSet, bookingQueueFilePath, false);
 
 

@@ -99,26 +99,31 @@ public class FacilityServiceImplement implements IFacility {
                 System.out.println("Please enter name of service: ");
                 nameOfService = sc.nextLine();
             } while (!Validate.validateServiceName(nameOfService));
+
             double villaArea;
             do {
                 System.out.println("Please enter villa's area: ");
                 villaArea = Double.parseDouble(sc.nextLine());
             } while (!Validate.validateArea(villaArea));
+
             int villaRate;
             do {
                 System.out.println("Please enter villa's rate: ");
                 villaRate = Integer.parseInt(sc.nextLine());
             } while (!Validate.validateRoomRate(villaRate));
+
             int villaMaxPeople;
             do {
                 System.out.println("Please enter villa's maximum of people: ");
                 villaMaxPeople = Integer.parseInt(sc.nextLine());
             } while (!Validate.validateMaximumPeople(villaMaxPeople));
+
             String villaTypeRent;
             do {
                 System.out.println("Please enter villa's type of rent: ");
                 villaTypeRent = sc.nextLine();
             } while (!Validate.validateRentalType(villaTypeRent));
+
             System.out.println("Enter villa standard: \n 1. 2 bed-rooms \n 2. 3 bed-rooms \n 3. 4 bed-rooms \n 4. President Suite Villa");
             int choiceOfVillaStandard = Integer.parseInt(sc.nextLine());
             String villaStandard = "";

@@ -88,14 +88,14 @@ public class ReadAndWrite {
         WriteToCSV(stringList, path, append);
     }
 
-    public static void WriteBookingTreeSetToQueue(Queue<Booking> bookingQueue, String path, boolean append) {
+    public static void WriteBookingQueueToCSV(Queue<Booking> bookingQueue, String path, boolean append) {
         List<String> stringList = new ArrayList<>();
         for (Booking booking : bookingQueue) {
             stringList.add(booking.getBookingString());
         }
-//        Collections.sort(stringList,new BookingComparator());
         WriteToCSV(stringList, path, append);
     }
+
 
     public static TreeSet<Booking> getBookingTreeSet(String path) {
         List<String> stringList = ReadCSVToString(path);
@@ -108,17 +108,17 @@ public class ReadAndWrite {
         return bookingTreeSet;
     }
 
-    public static Queue<Booking> getBookingQueue(String path) {
-        List<String> stringList = ReadCSVToString(path);
-        Queue<Booking> bookingQueue = new LinkedList<>();
-
-        for (int i = 0; i < stringList.size(); i++) {
-            String[] array = stringList.get(i).split(",");
-            Booking booking = new Booking(array[0], array[1], array[2], array[3], array[4], array[5]);
-            bookingQueue.add(booking);
-        }
-        return bookingQueue;
-    }
+//    public static Queue<Booking> getBookingQueue(String path) {
+//        List<String> stringList = ReadCSVToString(path);
+//        Queue<Booking> bookingQueue = new LinkedList<>();
+//
+//        for (int i = 0; i < stringList.size(); i++) {
+//            String[] array = stringList.get(i).split(",");
+//            Booking booking = new Booking(array[0], array[1], array[2], array[3], array[4], array[5]);
+//            bookingQueue.add(booking);
+//        }
+//        return bookingQueue;
+//    }
 
     public static void WriteContractStringToCSV(List<Contract> contractList, String path, boolean append) {
         List<String> stringList = new ArrayList<>();

@@ -12,16 +12,18 @@ public class FuramaController {
     static IFacility iFacility = new FacilityServiceImplement();
     static IBooking iBooking = new BookingServiceImplement();
     static IContract iContract = new ContractServiceImplement();
+    static IPromotion iPromotion = new PromotionServiceImplement();
+    static Scanner sc = new Scanner(System.in);
 
     public static void displayMainMenu() {
-        int choice =0;
+        int choice = 0;
         while (true) {
-            Scanner sc = new Scanner(System.in);
+
             System.out.println("Menu: \n 1. Employee Management \n 2. Customer Management \n 3. Facility Management \n 4. Booking Management \n 5. Promotion Management \n 6. Exit");
             System.out.println("Enter your choice: ");
             try {
                 choice = Integer.parseInt(sc.nextLine());
-            } catch (Exception e){
+            } catch (NumberFormatException e) {
                 System.out.println("Wrong format,please re-enter choice");
             }
 
@@ -39,7 +41,7 @@ public class FuramaController {
                     displayBookingManagement();
                     break;
                 case 5:
-                    System.out.println("Please select option: \n 1. Display list customers use service \n 2. Display list customers get voucher \n 3. Return main menu");
+                    displayPromotionManagement();
                     break;
                 case 6:
                     System.exit(0);
@@ -53,12 +55,12 @@ public class FuramaController {
     public static void displayEmployeeManagement() {
         int choice = 0;
         while (true) {
-            Scanner sc = new Scanner(System.in);
+
             System.out.println("EMPLOYEE MANAGEMENT: \n Please select option \n 1. Display list employees \n 2. Add new employee \n 3. Edit employee \n 4. Return main menu ");
             System.out.println("Enter your choice: ");
             try {
                 choice = Integer.parseInt(sc.nextLine());
-            } catch (Exception e){
+            } catch (NumberFormatException e) {
                 System.out.println("Wrong format,please re-enter choice");
             }
             switch (choice) {
@@ -84,12 +86,12 @@ public class FuramaController {
     public static void displayCustomerManagement() {
         int choice = 0;
         while (true) {
-            Scanner sc = new Scanner(System.in);
+
             System.out.println("CUSTOMER MANAGEMENT \n Please select option: \n 1. Display list customers \n 2. Add new customer \n 3. Edit customer \n 4. Return main menu");
             System.out.println("Enter your choice: ");
             try {
                 choice = Integer.parseInt(sc.nextLine());
-            } catch (Exception e){
+            } catch (NumberFormatException e) {
                 System.out.println("Wrong format,please re-enter choice");
             }
             switch (choice) {
@@ -115,12 +117,12 @@ public class FuramaController {
     public static void displayFacilityManagement() {
         int choice = 0;
         while (true) {
-            Scanner sc = new Scanner(System.in);
+
             System.out.println("FACILITY MANAGEMENT \n Please select option: \n 1. Display list facility \n 2. Add new facility \n 3. Display list facility maintenance \n 4. Return main menu");
             System.out.println("Enter your choice: ");
             try {
                 choice = Integer.parseInt(sc.nextLine());
-            } catch (Exception e){
+            } catch (NumberFormatException e) {
                 System.out.println("Wrong format,please re-enter choice");
             }
             switch (choice) {
@@ -146,12 +148,12 @@ public class FuramaController {
     public static void displayBookingManagement() {
         int choice = 0;
         while (true) {
-            Scanner sc = new Scanner(System.in);
+
             System.out.println("BOOKING MANAGEMENT \n Please select option: \n 1. Add new booking \n 2. Display list booking \n 3. Create new contracts \n 4. Display list contracts \n 5. Edit contracts \n 6. Return main menu");
             System.out.println("Enter your choice: ");
             try {
                 choice = Integer.parseInt(sc.nextLine());
-            } catch (Exception e){
+            } catch (NumberFormatException e) {
                 System.out.println("Wrong format,please re-enter choice");
             }
             switch (choice) {
@@ -179,6 +181,32 @@ public class FuramaController {
             }
         }
     }
+
+    public static void displayPromotionManagement() {
+        int choice = 0;
+        while (true) {
+
+            System.out.println("PROMOTION MANAGEMENT \n Please select option: \n 1. Display list customers use service \n 2. Display list customers get voucher \n 3. Return main menu");
+            System.out.println("Enter your choice: ");
+            try {
+                choice = Integer.parseInt(sc.nextLine());
+            } catch (NumberFormatException e) {
+                System.out.println("Wrong format,please re-enter choice");
+            }
+            switch (choice) {
+                case 1:
+                    iPromotion.displayListCustomerUseService();
+                    break;
+                case 2:
+                    iPromotion.displayListCustomerGetVoucher();
+                    break;
+                case 3:
+                    displayMainMenu();
+                    break;
+            }
+        }
+    }
+
 }
 
 

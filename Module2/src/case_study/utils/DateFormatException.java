@@ -1,7 +1,7 @@
 package case_study.utils;
 
 public class DateFormatException extends Exception {
-    String errorMessage;
+    String errorMessage ="Wrong date format,try this format ";
 
     public DateFormatException(String message) {
         super(message);
