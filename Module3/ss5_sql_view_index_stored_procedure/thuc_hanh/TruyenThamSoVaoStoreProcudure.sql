@@ -21,3 +21,22 @@ delimiter ;
 CALL GetCustomersCountByCity('Lyon',@total);
 
 SELECT @total;
+
+
+delimiter //
+create procedure setcounter(inout counter int,in inc int)
+begin
+set counter  = counter + inc;
+end //
+delimiter ;
+
+
+SET @counter = 1;
+
+CALL SetCounter(@counter,1); -- 2
+
+CALL SetCounter(@counter,1); -- 3
+
+CALL SetCounter(@counter,5); -- 8
+
+SELECT @counter; -- 8

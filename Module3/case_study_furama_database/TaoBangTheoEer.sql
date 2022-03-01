@@ -1,36 +1,36 @@
-CREATE TABLE vi_tri (
-    ma_vi_tri INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    ten_vi_tri VARCHAR(45)
+create table vi_tri (
+    ma_vi_tri int not null auto_increment primary key,
+    ten_vi_tri varchar(45)
 );
 
-CREATE TABLE trinh_do (
-    ma_trinh_do INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    ten_trinh_do VARCHAR(45)
+create table trinh_do (
+    ma_trinh_do int not null auto_increment primary key,
+    ten_trinh_do varchar(45)
 );
 
-CREATE TABLE bo_phan (
-    ma_bo_phan INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    ten_bo_phan VARCHAR(45)
+create table bo_phan (
+    ma_bo_phan int not null auto_increment primary key,
+    ten_bo_phan varchar(45)
 );
 
-CREATE TABLE nhan_vien (
-    ma_nhan_vien INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    ho_ten VARCHAR(45) not null,
-    ngay_sinh DATE not null,
-    so_cmnd VARCHAR(45) not null,
-    luong DOUBLE not null,
-    so_dien_thoai VARCHAR(45) not null,
-    email VARCHAR(45),
-    dia_chi VARCHAR(45),
-    ma_vi_tri INT not null,
-    ma_trinh_do INT not null,
-    ma_bo_phan INT not null,
-    FOREIGN KEY (ma_vi_tri)
-        REFERENCES vi_tri (ma_vi_tri),
-    FOREIGN KEY (ma_trinh_do)
-        REFERENCES trinh_do (ma_trinh_do),
-    FOREIGN KEY (ma_bo_phan)
-        REFERENCES bo_phan (ma_bo_phan)
+create table nhan_vien (
+    ma_nhan_vien int not null auto_increment primary key,
+    ho_ten varchar(45) not null,
+    ngay_sinh date not null,
+    so_cmnd varchar(45) not null,
+    luong double not null,
+    so_dien_thoai varchar(45) not null,
+    email varchar(45),
+    dia_chi varchar(45),
+    ma_vi_tri int not null,
+    ma_trinh_do int not null,
+    ma_bo_phan int not null,
+    foreign key (ma_vi_tri)
+        references vi_tri (ma_vi_tri),
+    foreign key (ma_trinh_do)
+        references trinh_do (ma_trinh_do),
+    foreign key (ma_bo_phan)
+        references bo_phan (ma_bo_phan)
 );
 
 
@@ -39,18 +39,18 @@ CREATE TABLE loai_khach (
     ten_loai_khach VARCHAR(45)
 );
 
-CREATE TABLE khach_hang (
-    ma_khach_hang INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    ho_ten VARCHAR(45) not null,
-    ngay_sinh DATE not null,
-    gioi_tinh BIT(1) not null,
-    so_cmnd VARCHAR(45) not null,
-    so_dien_thoai VARCHAR(45) not null,
-    email VARCHAR(45),
-    dia_chi VARCHAR(45),
-    ma_loai_khach INT not null,
-    FOREIGN KEY (ma_loai_khach)
-        REFERENCES loai_khach (ma_loai_khach)
+create table khach_hang (
+    ma_khach_hang int not null auto_increment primary key,
+    ho_ten varchar(45) not null,
+    ngay_sinh date not null,
+    gioi_tinh bit(1) not null,
+    so_cmnd varchar(45) not null,
+    so_dien_thoai varchar(45) not null,
+    email varchar(45),
+    dia_chi varchar(45),
+    ma_loai_khach int not null,
+    foreign key (ma_loai_khach)
+        references loai_khach (ma_loai_khach)
 );
 
 create table dich_vu_di_kem(
