@@ -26,3 +26,10 @@ set dia_chi = replace(dia_chi,'Dak Lak','Gia Lai')
 where dia_chi like '%Dak Lak%';
 set sql_safe_updates = 1;
 
+
+delimiter //
+create procedure sp_xoa_khach_hang(ma_khach_hang_can_xoa int)
+begin
+delete from khach_hang where khach_hang.ma_khach_hang = ma_khach_hang_can_xoa;
+end //
+delimiter ;
