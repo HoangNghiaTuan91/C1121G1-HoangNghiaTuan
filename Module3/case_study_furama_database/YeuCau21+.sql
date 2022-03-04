@@ -1,5 +1,5 @@
 use case_study_database;
-
+-- YC21:
 create view v_nhan_vien as
     select 
         nhan_vien.ma_nhan_vien,
@@ -19,6 +19,7 @@ create view v_nhan_vien as
             
 drop view v_nhan_vien;
 
+-- YC22:
 select * from v_nhan_vien;
 set sql_safe_updates = 0;
 update v_nhan_vien
@@ -26,7 +27,7 @@ set dia_chi = replace(dia_chi,'Dak Lak','Gia Lai')
 where dia_chi like '%Dak Lak%';
 set sql_safe_updates = 1;
 
-
+-- YC23:
 delimiter //
 create procedure sp_xoa_khach_hang(ma_khach_hang_can_xoa int)
 begin

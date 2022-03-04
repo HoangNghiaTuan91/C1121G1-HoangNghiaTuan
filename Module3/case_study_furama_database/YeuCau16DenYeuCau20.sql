@@ -2,12 +2,13 @@ use case_study_database;
 
 -- YC16:Xóa những Nhân viên chưa từng lập được hợp đồng nào từ năm 2019 đến năm 2021.
 
--- select nhan_vien.ma_nhan_vien,nhan_vien.ho_ten
--- from nhan_vien where nhan_vien.ma_nhan_vien not in(select nhan_vien.ma_nhan_vien
--- from nhan_vien inner join hop_dong on hop_dong.ma_nhan_vien = nhan_vien.ma_nhan_vien
--- where year(hop_dong.ngay_lam_hop_dong) between 2019 and 2021
--- group by nhan_vien.ma_nhan_vien
--- having count(hop_dong.ma_hop_dong) > 0);
+create temporary table temp_hop_dong_2(
+select hop_dong.ma_nhan_vien from hop_dong
+inner join nhan_vien on hop_dong.ma_nhan_vien = nhan_vien.ma_nhan_vien where year(hop_dong.ngay_lam_hop_dong) between 2019 and 2021
+);
+set sql_safe_updates = 0;
+delete from nhan_vien where nhan_vien.ma_nhan_vien not in (select * from temp_hop_dong_2);
+set sql_safe_updates = 1;
 
 -- select nhan_vien.ma_nhan_vien,nhan_vien.ho_ten from nhan_vien
 -- where nhan_vien.ma_nhan_vien not in (select hop_dong.ma_nhan_vien from hop_dong where year(hop_dong.ngay_lam_hop_dong) in (2019,2020,2021));
@@ -32,7 +33,6 @@ where khach_hang.ma_loai_khach = 1;
 
 -- YC18:Xóa những khách hàng có hợp đồng trước năm 2021 (chú ý ràng buộc giữa các bảng).
 
--- set sql_safe_updates = 0;
 create temporary table temp_hop_dong_chi_tiet(
 select hop_dong_chi_tiet.ma_hop_dong from hop_dong_chi_tiet 
 inner join hop_dong on hop_dong.ma_hop_dong= hop_dong_chi_tiet.ma_hop_dong where year(hop_dong.ngay_lam_hop_dong)<2021);

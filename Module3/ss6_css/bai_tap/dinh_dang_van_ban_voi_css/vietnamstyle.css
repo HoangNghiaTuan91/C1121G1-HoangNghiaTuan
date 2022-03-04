@@ -1,0 +1,29 @@
+h1 {
+    border-bottom: 1px solid black;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 50px;
+}
+
+p {
+    text-indent: 40px;
+    text-align: justify;
+    font-size: 18px;
+    font-family: Arial;
+}
+
+a {
+    text-decoration: none;
+}
+
+div {
+    font-size: medium;
+    font-family: Arial;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+span {
+    color: deepskyblue;
+}
