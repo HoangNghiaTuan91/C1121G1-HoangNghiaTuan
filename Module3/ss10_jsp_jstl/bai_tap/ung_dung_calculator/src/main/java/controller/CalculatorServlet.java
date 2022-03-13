@@ -12,7 +12,11 @@ import java.io.PrintWriter;
 public class CalculatorServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+//        RequestDispatcher requestDispatcher = request.getRequestDispatcher("index.jsp");
+//        requestDispatcher.forward(request, response);
+        // điều hướng trang kết quả trở về trang chủ,gửi theo data,enter trên trình duyệt,f5 ko được
+        response.sendRedirect("index.jsp");
+        // điều hướng trang kết quả trở về trang chủ,ko gửi theo data,enter trên trình duyệt,f5 ko được
     }
 
     @Override
@@ -23,10 +27,10 @@ public class CalculatorServlet extends HttpServlet {
         PrintWriter printWriter = response.getWriter();
         printWriter.println("<html>");
         printWriter.println("<h1>Result:</h1>");
-        try{
+        try {
             float result = Calculator.calculate(firstOperand, secondOperand, operator);
             printWriter.println(firstOperand + " " + operator + " " + secondOperand + " = " + result);
-        }catch (Exception ex){
+        } catch (Exception ex) {
             printWriter.println("Error: " + ex.getMessage());
         }
         printWriter.println("</html>");
