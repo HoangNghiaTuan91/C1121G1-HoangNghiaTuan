@@ -10,12 +10,12 @@ public class Product {
     public Product() {
     }
 
-    public Product(Integer id, String name, Double price, String description, String producer) {
+    public Product(Integer id, String name, Double price, String description, String manufacturer) {
         this.id = id;
         this.name = name;
         this.price = price;
         this.description = description;
-        this.manufacturer = producer;
+        this.manufacturer = manufacturer;
     }
 
     public Integer getId() {

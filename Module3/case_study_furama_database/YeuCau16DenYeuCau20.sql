@@ -33,27 +33,38 @@ where khach_hang.ma_loai_khach = 1;
 
 -- YC18:Xóa những khách hàng có hợp đồng trước năm 2021 (chú ý ràng buộc giữa các bảng).
 
-create temporary table temp_hop_dong_chi_tiet(
-select hop_dong_chi_tiet.ma_hop_dong from hop_dong_chi_tiet 
-inner join hop_dong on hop_dong.ma_hop_dong= hop_dong_chi_tiet.ma_hop_dong where year(hop_dong.ngay_lam_hop_dong)<2021);
+-- create temporary table temp_hop_dong_chi_tiet(
+-- select hop_dong_chi_tiet.ma_hop_dong from hop_dong_chi_tiet 
+-- inner join hop_dong on hop_dong.ma_hop_dong= hop_dong_chi_tiet.ma_hop_dong where year(hop_dong.ngay_lam_hop_dong)<2021);
 
-delete from hop_dong_chi_tiet where hop_dong_chi_tiet.ma_hop_dong in (select * from abc);
+-- delete from hop_dong_chi_tiet where hop_dong_chi_tiet.ma_hop_dong in (select * from abc);
 
- select * from hop_dong_chi_tiet;
- create temporary table temp_hop_dong(
- select hop_dong.ma_hop_dong from hop_dong where year(hop_dong.ngay_lam_hop_dong)<2021);
+--  select * from hop_dong_chi_tiet;
+--  create temporary table temp_hop_dong(
+--  select hop_dong.ma_hop_dong from hop_dong where year(hop_dong.ngay_lam_hop_dong)<2021);
 
-delete from hop_dong where hop_dong.ma_hop_dong in (select * from temp_hop_dong);
+-- delete from hop_dong where hop_dong.ma_hop_dong in (select * from temp_hop_dong);
 
-create temporary table temp_khach_hang(
-select khach_hang.ma_khach_hang from khach_hang 
-inner join hop_dong on khach_hang.ma_khach_hang = hop_dong.ma_khach_hang where year(hop_dong.ngay_lam_hop_dong)>=2021);
+-- create temporary table temp_khach_hang(
+-- select khach_hang.ma_khach_hang from khach_hang 
+-- inner join hop_dong on khach_hang.ma_khach_hang = hop_dong.ma_khach_hang where year(hop_dong.ngay_lam_hop_dong)>=2021);
 
-delete from khach_hang where khach_hang.ma_khach_hang not in (select * from temp_khach_hang);
+-- delete from khach_hang where khach_hang.ma_khach_hang not in (select * from temp_khach_hang);
 
 -- delete from khach_hang where khach_hang.ma_khach_hang 
 -- in (select hop_dong.ma_khach_hang from hop_dong where year(hop_dong.ngay_lam_hop_dong) < 2021);
 -- set sql_safe_updates = 1;
+
+create temporary table temp_khach_hang(
+select khach_hang.ma_khach_hang from khach_hang
+inner join hop_dong on khach_hang.ma_khach_hang = hop_dong.ma_khach_hang where year(hop_dong.ngay_lam_hop_dong) < 2021
+);
+
+delete from hop_dong_chi_tiet where hop_dong_chi_tiet.ma_hop_dong in (select hop_dong.ma_hop_dong from hop_dong where hop_dong.ma_khach_hang in (select ma_khach_hang from temp_khach_hang));
+
+delete from hop_dong where hop_dong.ma_khach_hang in (select ma_khach_hang from temp_khach_hang);
+
+delete from khach_hang where khach_hang.ma_khach_hang in (select ma_khach_hang from temp_khach_hang);
 
 -- YC19:Cập nhật giá cho các dịch vụ đi kèm được sử dụng trên 10 lần trong năm 2020 lên gấp đôi.
 -- set sql_safe_updates = 0;

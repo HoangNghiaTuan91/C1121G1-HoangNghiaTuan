@@ -23,6 +23,7 @@
 <table class="table table-striped">
     <thead>
     <tr>
+        <th scope="col">Id</th>
         <th scope="col">Name</th>
         <th scope="col">Price</th>
         <th scope="col">Description</th>
@@ -34,6 +35,7 @@
     <tbody>
     <c:forEach items='${requestScope["products"]}' var="product">
         <tr>
+            <td>${product.getId()}</td>
             <td><a href="/product?action=view&id=${product.getId()}">${product.getName()}</a></td>
             <td>${product.getPrice()}</td>
             <td>${product.getDescription()}</td>

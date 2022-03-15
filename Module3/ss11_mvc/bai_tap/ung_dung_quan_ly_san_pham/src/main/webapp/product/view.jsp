@@ -18,6 +18,7 @@
 <table class="table table-striped">
     <thead>
     <tr>
+        <th scope="col">Id</th>
         <th scope="col">Name</th>
         <th scope="col">Price</th>
         <th scope="col">Description</th>
@@ -26,6 +27,7 @@
     </thead>
     <tbody>
     <tr>
+        <td>${requestScope["product"].getId()}</td>
         <td>${requestScope["product"].getName()}</td>
         <td>${requestScope["product"].getPrice()}</td>
         <td>${requestScope["product"].getDescription()}</td>

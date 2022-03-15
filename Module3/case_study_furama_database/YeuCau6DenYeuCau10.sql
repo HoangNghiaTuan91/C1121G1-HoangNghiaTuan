@@ -29,13 +29,10 @@ select khach_hang.ho_ten from khach_hang union select khach_hang.ho_ten from kha
 -- nghĩa là tương ứng với mỗi tháng trong năm 2021 thì sẽ có bao nhiêu khách hàng thực hiện đặt phòng.
 
 select month(hop_dong.ngay_lam_hop_dong) as 'thang',
-sum(ifnull(dich_vu.chi_phi_thue,0)+ifnull(hop_dong_chi_tiet.so_luong,0)*ifnull(dich_vu_di_kem.gia,0)) as 'doanh_thu',
-count(hop_dong.ma_khach_hang) as 'so_luong_khach_dat_phong'
-from hop_dong inner join dich_vu on hop_dong.ma_dich_vu = dich_vu.ma_dich_vu
-inner join hop_dong_chi_tiet on hop_dong_chi_tiet.ma_hop_dong = hop_dong.ma_hop_dong
-inner join dich_vu_di_kem on hop_dong_chi_tiet.ma_dich_vu_di_kem = dich_vu_di_kem.ma_dich_vu_di_kem
+count(month(hop_dong.ngay_lam_hop_dong)) as 'so_luong_khach_dat_phong'
+from hop_dong
 where year(hop_dong.ngay_lam_hop_dong) = 2021
-group by month(hop_dong.ngay_lam_hop_dong);
+group by thang;
 
 -- YC10:Hiển thị thông tin tương ứng với từng hợp đồng thì đã sử dụng bao nhiêu dịch vụ đi kèm. 
 -- Kết quả hiển thị bao gồm ma_hop_dong, ngay_lam_hop_dong, ngay_ket_thuc, tien_dat_coc, so_luong_dich_vu_di_kem 
@@ -43,6 +40,5 @@ group by month(hop_dong.ngay_lam_hop_dong);
 select hop_dong.ma_hop_dong,hop_dong.ngay_lam_hop_dong,hop_dong.ngay_ket_thuc,hop_dong.tien_dat_coc,
 sum(ifnull(hop_dong_chi_tiet.so_luong,0)) as so_luong_dich_vu_di_kem
 from hop_dong left join hop_dong_chi_tiet on hop_dong_chi_tiet.ma_hop_dong = hop_dong.ma_hop_dong
-left join dich_vu_di_kem on hop_dong_chi_tiet.ma_dich_vu_di_kem = dich_vu_di_kem.ma_dich_vu_di_kem
 group by hop_dong.ma_hop_dong;
 

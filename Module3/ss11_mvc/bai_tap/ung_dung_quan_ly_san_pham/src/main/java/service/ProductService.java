@@ -16,4 +16,6 @@ public interface ProductService {
     List<Product> searchByName(String name);
 
     Product findById(int id);
+
+    Integer lastId();
 }
