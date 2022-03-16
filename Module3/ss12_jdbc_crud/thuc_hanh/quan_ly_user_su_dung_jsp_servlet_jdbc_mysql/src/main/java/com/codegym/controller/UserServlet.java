@@ -81,7 +81,7 @@ public class UserServlet extends HttpServlet {
 
     private void showEditForm(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int id = Integer.parseInt(request.getParameter("id"));
-        User existingUser = userDAO.selectUser(id);
+        User existingUser = userDAO.getUserById(id);
         request.setAttribute("user", existingUser);
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("user/edit.jsp");
         try {
@@ -161,7 +161,7 @@ public class UserServlet extends HttpServlet {
         String country = request.getParameter("country");
 
         User user = new User(name, email, country);
-        userDAO.insertUser(user);
+        userDAO.insertUserStore(user);
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("user/create.jsp");
         try {
             requestDispatcher.forward(request, response);

@@ -57,11 +57,11 @@ public class UserRepositoryImpl implements UserRepository {
             preparedStatement.setInt(1, id);
             System.out.println(preparedStatement);
             ResultSet rs = preparedStatement.executeQuery();
-            while (rs.next()){
+            while (rs.next()) {
                 String name = rs.getString("name");
                 String email = rs.getString("email");
                 String country = rs.getString("country");
-                user = new User(name,email,country);
+                user = new User(name, email, country);
             }
         } catch (SQLException e) {
             printSQLException(e);
@@ -73,18 +73,18 @@ public class UserRepositoryImpl implements UserRepository {
     public List<User> selectAllUser() {
         List<User> users = new ArrayList<>();
         try (Connection connection = getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL_USERS);){
+             PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL_USERS);) {
             System.out.println(preparedStatement);
             ResultSet rs = preparedStatement.executeQuery();
-            while (rs.next()){
+            while (rs.next()) {
                 int id = rs.getInt("id");
                 String name = rs.getString("name");
                 String email = rs.getString("email");
                 String country = rs.getString("country");
-                users.add(new User(id,name,email,country));
+                users.add(new User(id, name, email, country));
             }
-        } catch (SQLException e){
-                 printSQLException(e);
+        } catch (SQLException e) {
+            printSQLException(e);
         }
         return users;
     }
@@ -93,9 +93,9 @@ public class UserRepositoryImpl implements UserRepository {
     public boolean deleteUser(int id) throws SQLException {
         boolean rowDeleted;
         try (Connection connection = getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement(DELETE_USERS_SQL)){
-            preparedStatement.setInt(1,id);
-            rowDeleted = preparedStatement.executeUpdate()>0;
+             PreparedStatement preparedStatement = connection.prepareStatement(DELETE_USERS_SQL)) {
+            preparedStatement.setInt(1, id);
+            rowDeleted = preparedStatement.executeUpdate() > 0;
         }
         return rowDeleted;
     }
@@ -104,12 +104,12 @@ public class UserRepositoryImpl implements UserRepository {
     public boolean updateUser(User user) throws SQLException {
         boolean rowUpdated;
         try (Connection connection = getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement(UPDATE_USERS_SQL)){
-            preparedStatement.setString(1,user.getName());
-            preparedStatement.setString(2,user.getEmail());
-            preparedStatement.setString(3,user.getCountry());
-            preparedStatement.setInt(4,user.getId());
-            rowUpdated = preparedStatement.executeUpdate()>0;
+             PreparedStatement preparedStatement = connection.prepareStatement(UPDATE_USERS_SQL)) {
+            preparedStatement.setString(1, user.getName());
+            preparedStatement.setString(2, user.getEmail());
+            preparedStatement.setString(3, user.getCountry());
+            preparedStatement.setInt(4, user.getId());
+            rowUpdated = preparedStatement.executeUpdate() > 0;
         }
         return rowUpdated;
     }
@@ -118,16 +118,16 @@ public class UserRepositoryImpl implements UserRepository {
     public List<User> searchByCountry(String country) {
         List<User> users = new ArrayList<>();
         try (Connection connection = getConnection();
-            PreparedStatement preparedStatement = connection.prepareStatement(SELECT_COUNTRY_SQL)){
+             PreparedStatement preparedStatement = connection.prepareStatement(SELECT_COUNTRY_SQL)) {
             System.out.println(preparedStatement);
-            preparedStatement.setString(1,"%"+country+"%");
+            preparedStatement.setString(1, "%" + country + "%");
             ResultSet rs = preparedStatement.executeQuery();
-            while (rs.next()){
+            while (rs.next()) {
                 int id = rs.getInt("id");
                 String name = rs.getString("name");
                 String email = rs.getString("email");
                 String countryy = rs.getString("country");
-                users.add(new User(id,name,email,countryy));
+                users.add(new User(id, name, email, countryy));
             }
         } catch (SQLException e) {
             printSQLException(e);
@@ -139,21 +139,20 @@ public class UserRepositoryImpl implements UserRepository {
     public List<User> sortByName() {
         List<User> users = new ArrayList<>();
         Connection connection = getConnection();
-        try (PreparedStatement preparedStatement = connection.prepareStatement(SORT_BY_NAME_SQL)){
+        try (PreparedStatement preparedStatement = connection.prepareStatement(SORT_BY_NAME_SQL)) {
             System.out.println(preparedStatement);
 //            preparedStatement.setString(1,"name");
             ResultSet rs = preparedStatement.executeQuery();
-            while (rs.next()){
+            while (rs.next()) {
                 int id = rs.getInt("id");
                 String name = rs.getString("name");
                 String email = rs.getString("email");
                 String country = rs.getString("country");
-                users.add(new User(id,name,email,country));
+                users.add(new User(id, name, email, country));
             }
         } catch (SQLException e) {
             printSQLException(e);
-        }
-        finally {
+        } finally {
             try {
                 connection.close();
             } catch (SQLException e) {
@@ -161,6 +160,42 @@ public class UserRepositoryImpl implements UserRepository {
             }
         }
         return users;
+    }
+
+    @Override
+    public User getUserById(int id) {
+        User user = null;
+        String query = "{call get_user_by_id(?)}";
+        Connection connection = getConnection();
+        try{
+            CallableStatement callableStatement = connection.prepareCall(query);
+            callableStatement.setInt(1,id);
+            ResultSet resultSet = callableStatement.executeQuery();
+            while (resultSet.next()){
+                String name = resultSet.getString("name");
+                String email = resultSet.getString("email");
+                String country = resultSet.getString("country");
+                user = new User(id,name,email,country);
+            }
+        } catch (SQLException e) {
+            printSQLException(e);
+        }
+        return user;
+    }
+
+    @Override
+    public void insertUserStore(User user) throws SQLException {
+        String query = "{call insert_user(?,?,?)}";
+        Connection connection = getConnection();
+        try {
+            CallableStatement callableStatement = connection.prepareCall(query);
+            callableStatement.setString(1,user.getName());
+            callableStatement.setString(2,user.getEmail());
+            callableStatement.setString(3,user.getCountry());
+            callableStatement.executeUpdate();
+        } catch (SQLException e) {
+           printSQLException(e);
+        }
     }
 
     private void printSQLException(SQLException ex) {

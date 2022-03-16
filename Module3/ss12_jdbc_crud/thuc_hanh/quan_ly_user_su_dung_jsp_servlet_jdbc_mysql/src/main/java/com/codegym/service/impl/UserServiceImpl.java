@@ -45,4 +45,14 @@ public class UserServiceImpl implements UserService {
     public List<User> sortByName() {
         return userRepository.sortByName();
     }
+
+    @Override
+    public User getUserById(int id) {
+        return userRepository.getUserById(id);
+    }
+
+    @Override
+    public void insertUserStore(User user) throws SQLException {
+        userRepository.insertUserStore(user);
+    }
 }
