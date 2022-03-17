@@ -29,4 +29,6 @@ public interface UserService {
     public boolean updateUserUseCallableStatement(User user) throws SQLException;
 
     public boolean deleteUserUseCallableStatement(int id) throws SQLException;
+
+    void addUserTransaction(User user, int[] permission);
 }

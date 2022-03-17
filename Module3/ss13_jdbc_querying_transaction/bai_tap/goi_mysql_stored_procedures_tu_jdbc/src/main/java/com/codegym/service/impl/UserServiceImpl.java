@@ -70,4 +70,9 @@ public class UserServiceImpl implements UserService {
     public boolean deleteUserUseCallableStatement(int id) throws SQLException {
         return userRepository.deleteUserUseCallableStatement(id);
     }
+
+    @Override
+    public void addUserTransaction(User user, int[] permission) {
+
+    }
 }

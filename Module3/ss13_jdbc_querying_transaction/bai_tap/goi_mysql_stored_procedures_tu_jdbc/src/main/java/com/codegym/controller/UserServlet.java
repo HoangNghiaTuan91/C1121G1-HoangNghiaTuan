@@ -39,6 +39,9 @@ public class UserServlet extends HttpServlet {
                 case "sort":
                     sortByName(request, response);
                     break;
+                case "permission":
+                    addUserPermission(request, response);
+                    break;
                 default:
                     listUser(request, response);
                     break;
@@ -62,7 +65,8 @@ public class UserServlet extends HttpServlet {
         }
 
     }
-//    Gọi Stored Procedures từ JDBC sử dụng CallableStatement cho chức năng xoá user
+
+    //    Gọi Stored Procedures từ JDBC sử dụng CallableStatement cho chức năng xoá user
     private void deleteUser(HttpServletRequest request, HttpServletResponse response) throws SQLException, ServletException, IOException {
         int id = Integer.parseInt(request.getParameter("id"));
         userRepositoryImpl.deleteUser(id);
@@ -130,10 +134,10 @@ public class UserServlet extends HttpServlet {
 
     private void sortByName(HttpServletRequest request, HttpServletResponse response) {
         List<User> sortByName = userRepositoryImpl.sortByName();
-        request.setAttribute("userList",sortByName);
+        request.setAttribute("userList", sortByName);
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("user/list.jsp");
         try {
-            requestDispatcher.forward(request,response);
+            requestDispatcher.forward(request, response);
         } catch (ServletException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -171,7 +175,8 @@ public class UserServlet extends HttpServlet {
             e.printStackTrace();
         }
     }
-//Gọi Stored Procedures từ JDBC sử dụng CallableStatement cho chức năng sửa thông tin user
+
+    //Gọi Stored Procedures từ JDBC sử dụng CallableStatement cho chức năng sửa thông tin user
     private void updateUser(HttpServletRequest request, HttpServletResponse response) throws SQLException {
         int id = Integer.parseInt(request.getParameter("id"));
         String name = request.getParameter("name");
@@ -187,5 +192,11 @@ public class UserServlet extends HttpServlet {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    private void addUserPermission(HttpServletRequest request, HttpServletResponse response) {
+        User user = new User("Linh", "linh123@yahoo.com", "VN");
+        int[] permission = {1, 2, 3};
+        userRepositoryImpl.addUserTransaction(user, permission);
     }
 }

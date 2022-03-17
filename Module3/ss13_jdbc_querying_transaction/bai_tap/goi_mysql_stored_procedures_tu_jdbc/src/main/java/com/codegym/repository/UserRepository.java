@@ -29,4 +29,6 @@ public interface UserRepository {
     public boolean updateUserUseCallableStatement(User user) throws SQLException;
 
     public boolean deleteUserUseCallableStatement(int id) throws SQLException;
+
+    public void addUserTransaction(User user, int[] permission);
 }

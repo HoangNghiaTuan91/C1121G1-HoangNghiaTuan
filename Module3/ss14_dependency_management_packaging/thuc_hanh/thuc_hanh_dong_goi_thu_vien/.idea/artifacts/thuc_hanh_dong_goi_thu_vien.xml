@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="thuc_hanh_dong_goi_thu_vien">
+    <output-path>$PROJECT_DIR$/out/artifacts/thuc_hanh_dong_goi_thu_vien</output-path>
+    <root id="archive" name="thuc_hanh_dong_goi_thu_vien.jar">
+      <element id="module-output" name="thuc_hanh_dong_goi_thu_vien" />
+    </root>
+  </artifact>
+</component>
